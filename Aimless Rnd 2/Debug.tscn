@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5kaqqvtxak0v"]
+
+[ext_resource type="PackedScene" uid="uid://diqcix80tn6ba" path="res://Player.tscn" id="1_jm7vh"]
+[ext_resource type="PackedScene" uid="uid://dt2ggbjsag7lm" path="res://targetable_node.tscn" id="2_7sv1h"]
+[ext_resource type="PackedScene" uid="uid://b6apxs0m53t2s" path="res://DummyEnemy.tscn" id="3_s1dji"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r8plh"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_h1gne"]
+sky_material = SubResource("ProceduralSkyMaterial_r8plh")
+
+[sub_resource type="Environment" id="Environment_5cj7t"]
+background_mode = 2
+sky = SubResource("Sky_h1gne")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Debug" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5cj7t")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(40, 0, 0, 0, 0.2, 0, 0, 0, 30, 0, 0, 0)
+use_collision = true
+
+[node name="Player" parent="." instance=ExtResource("1_jm7vh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.63726, 0)
+
+[node name="TargetableNode" parent="Player" instance=ExtResource("2_7sv1h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.82324, 3.09623, 0)
+top_level = true
+
+[node name="Enemy" parent="." instance=ExtResource("3_s1dji")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2584, 1.49601, 0)

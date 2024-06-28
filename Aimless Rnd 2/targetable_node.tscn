@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt2ggbjsag7lm"]
+
+[ext_resource type="Script" path="res://TargetableNode.gd" id="1_lnfno"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hdid8"]
+albedo_color = Color(1, 0.282353, 0.184314, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_n8qwr"]
+
+[node name="TargetableNode" type="Node3D" groups=["targetable"]]
+script = ExtResource("1_lnfno")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_hdid8")
+mesh = SubResource("SphereMesh_n8qwr")

@@ -1,0 +1,77 @@
+[gd_scene load_steps=15 format=3 uid="uid://diqcix80tn6ba"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_aeytj"]
+[ext_resource type="Script" path="res://Player/Player States/FiniteStateMachine.gd" id="2_5ggw2"]
+[ext_resource type="Script" path="res://Player/Player Camera/Camera3D.gd" id="2_goduv"]
+[ext_resource type="PackedScene" uid="uid://bh6oryxhdrptf" path="res://hand.tscn" id="3_evsne"]
+[ext_resource type="Script" path="res://Player/Player States/player_idle.gd" id="3_uuswf"]
+[ext_resource type="Script" path="res://Player/Player States/player_walking.gd" id="4_pbaa5"]
+[ext_resource type="PackedScene" uid="uid://cnf342mhj32pk" path="res://machine_gun.tscn" id="4_se0kx"]
+[ext_resource type="Script" path="res://Player/Player Camera/CameraUnlocked.gd" id="4_sj8r2"]
+[ext_resource type="PackedScene" uid="uid://dmhsjvgbwujh0" path="res://bullet_ray.tscn" id="5_p7x1a"]
+[ext_resource type="Script" path="res://Player/Player States/player_air.gd" id="5_ton63"]
+[ext_resource type="PackedScene" uid="uid://c2j4vmrajhjiw" path="res://crosshair.tscn" id="11_e5cpp"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_a0hi8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pat1n"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_7pa2i"]
+flip_faces = true
+size = Vector2(2, 2)
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_aeytj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_a0hi8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_pat1n")
+
+[node name="CameraMount" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CameraMount"]
+top_level = true
+script = ExtResource("2_goduv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CameraMount/Camera3D"]
+visible = false
+mesh = SubResource("QuadMesh_7pa2i")
+
+[node name="Hand" parent="CameraMount/Camera3D" instance=ExtResource("3_evsne")]
+
+[node name="MachineGun" parent="CameraMount/Camera3D/Hand" instance=ExtResource("4_se0kx")]
+transform = Transform3D(0.095, 0, 0, 0, 0.08, 0, 0, 0, 1, 0.264882, -0.150864, -0.191909)
+
+[node name="Raycast Bullet" parent="CameraMount/Camera3D" instance=ExtResource("5_p7x1a")]
+target_position = Vector3(0, 0, -1000)
+
+[node name="crosshair" parent="CameraMount/Camera3D" instance=ExtResource("11_e5cpp")]
+
+[node name="FiniteStateMachine2" type="Node" parent="CameraMount" node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_5ggw2")
+initial_state = NodePath("CameraUnlocked")
+
+[node name="CameraUnlocked" type="Node" parent="CameraMount/FiniteStateMachine2" node_paths=PackedStringArray("camera")]
+script = ExtResource("4_sj8r2")
+camera = NodePath("../..")
+
+[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_5ggw2")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("player")]
+script = ExtResource("3_uuswf")
+player = NodePath("../..")
+
+[node name="Walking" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("player")]
+script = ExtResource("4_pbaa5")
+player = NodePath("../..")
+
+[node name="Air" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("player")]
+script = ExtResource("5_ton63")
+player = NodePath("../..")
+
+[connection signal="Shot_fired" from="CameraMount/Camera3D/Hand/MachineGun" to="." method="_on_machine_gun_shot_fired"]
+[connection signal="Shot_fired" from="CameraMount/Camera3D/Hand/MachineGun" to="CameraMount/Camera3D/crosshair" method="_on_machine_gun_shot_fired"]

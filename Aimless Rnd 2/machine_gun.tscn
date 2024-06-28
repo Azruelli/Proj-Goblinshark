@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnf342mhj32pk"]
+
+[ext_resource type="Script" path="res://machine_gun.gd" id="1_1v3s3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wbtt4"]
+
+[node name="MachineGun" type="MeshInstance3D"]
+transform = Transform3D(0.095, 0, 0, 0, 0.08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_wbtt4")
+script = ExtResource("1_1v3s3")
