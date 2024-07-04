@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://d0f31ob8ps6al"]
+
+[ext_resource type="Script" path="res://Player/Player States/FiniteStateMachine.gd" id="1_n7f0t"]
+[ext_resource type="Script" path="res://Zealot/Zealot.gd" id="1_yn0vs"]
+[ext_resource type="Script" path="res://Zealot/Scripts/ZealotAsleep.gd" id="2_lmg43"]
+[ext_resource type="Script" path="res://Zealot/Scripts/ZealotAttacking.gd" id="3_hb7t0"]
+[ext_resource type="Script" path="res://Zealot/Scripts/ZealotAwake.gd" id="4_q8wv6"]
+[ext_resource type="Script" path="res://Zealot/StateTimer.gd" id="6_mp0p8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5uh2l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n65sp"]
+albedo_color = Color(0.203922, 1, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pfe5l"]
+
+[node name="Zealot" type="CharacterBody3D" groups=["Enemy"]]
+script = ExtResource("1_yn0vs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_5uh2l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_n65sp")
+mesh = SubResource("CapsuleMesh_pfe5l")
+
+[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("1_n7f0t")
+initial_state = NodePath("ZealotAsleep")
+
+[node name="ZealotAsleep" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("zealot")]
+script = ExtResource("2_lmg43")
+zealot = NodePath("../..")
+
+[node name="ZealotAttacking" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("zealot")]
+script = ExtResource("3_hb7t0")
+zealot = NodePath("../..")
+
+[node name="ZealotAwake" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("zealot")]
+script = ExtResource("4_q8wv6")
+zealot = NodePath("../..")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
+
+[node name="StateTimer" type="Timer" parent="."]
+wait_time = 4.0
+script = ExtResource("6_mp0p8")
+
+[node name="ZealotEyes" type="Node3D" parent="."]
+
+[node name="RayCast3D" type="RayCast3D" parent="ZealotEyes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.303104, 0.585854)
+target_position = Vector3(0, 0, -35)
+
+[connection signal="timeout" from="StateTimer" to="." method="_on_state_timer_timeout"]
+[connection signal="timeout" from="StateTimer" to="FiniteStateMachine/ZealotAwake" method="_on_state_timer_timeout"]

@@ -1,7 +1,5 @@
-extends Node
-
-class_name State
-signal Transitioned 
+extends ZealotState
+class_name ZealotAsleep
 
 func enter() -> void:
 	pass
@@ -10,7 +8,8 @@ func exit() -> void:
 	pass
 
 func update(_delta: float) -> void:
-	pass
+	if zealot.health != 100:
+		Enter_Awake()
 
 func process(_delta: float) -> void:
 	pass

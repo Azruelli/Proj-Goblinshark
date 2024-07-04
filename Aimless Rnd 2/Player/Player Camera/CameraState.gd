@@ -12,13 +12,11 @@ func _ready() -> void:
 func LockCamera() -> void:
 	if Input.is_action_just_pressed("LockOn") and camera_lock == 0:
 		Transitioned.emit("CameraLocked")
-		camera_lock = 1
 		print(camera_lock)
 
 func UnlockCamera() -> void:
 	if Input.is_action_just_pressed("LockOn") and camera_lock == 1:
 		Transitioned.emit("CameraUnlocked")
-		camera_lock = 0
 		print(camera_lock)
 
 func find_target() -> Node3D:

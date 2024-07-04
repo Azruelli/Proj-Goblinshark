@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ektohgfuxwql"]
+
+[ext_resource type="Script" path="res://zealot_projectile.gd" id="1_f44us"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_gb45m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7bg3i"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_3net4"]
+
+[node name="Zealot Projectile" type="Node3D"]
+script = ExtResource("1_f44us")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_gb45m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_7bg3i")
+mesh = SubResource("SphereMesh_3net4")
+skeleton = NodePath("../Area3D/CollisionShape3D")

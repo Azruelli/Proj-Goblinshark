@@ -34,7 +34,6 @@ shape = SubResource("CapsuleShape3D_pat1n")
 
 [node name="Camera3D" type="Camera3D" parent="CameraMount"]
 top_level = true
-far = 16000.0
 script = ExtResource("2_goduv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CameraMount/Camera3D"]
@@ -45,6 +44,10 @@ mesh = SubResource("QuadMesh_7pa2i")
 
 [node name="MachineGun" parent="CameraMount/Camera3D/Hand" instance=ExtResource("4_se0kx")]
 transform = Transform3D(0.095, 0, 0, 0, 0.08, 0, 0, 0, 1, 0.264882, -0.150864, -0.191909)
+damage = null
+fire_time = null
+load_time = null
+max_load = null
 
 [node name="Raycast Bullet" parent="CameraMount/Camera3D" instance=ExtResource("5_p7x1a")]
 visible = false
