@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://35qwr26v10y7"]
+[gd_scene load_steps=4 format=3 uid="uid://35qwr26v10y7"]
+
+[ext_resource type="Texture2D" uid="uid://emqyh2tg7c52" path="res://Textures/Unsorted/461223124.jpg" id="1_hxcgy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0sa43"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sb0kl"]
 albedo_color = Color(0, 1, 1, 1)
-emission_enabled = true
+albedo_texture = ExtResource("1_hxcgy")
 emission = Color(0, 1, 1, 1)
 emission_energy_multiplier = 4.0
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [node name="Chapel Light" type="RigidBody3D"]
 gravity_scale = 0.0

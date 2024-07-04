@@ -1,1 +1,11 @@
 res://Stages/chapel.tscn
+res://Debug.tscn
+res://Stages/Doodads/Chapel/chapel_light.tscn
+res://Player.tscn
+res://Stages/Doodads/Chapel/Pew.tscn
+res://Stages/Doodads/Chapel/banner.tscn
+res://Stages/Doodads/Chapel/plasma_chandelier.tscn
+res://Stages/Doodads/Chapel/altar.tscn
+res://Stages/Doodads/Chapel/plasma_lamp.tscn
+res://Materials/fester_1.tscn
+res://Stages/Doodads/Chapel/fester_1.tscn

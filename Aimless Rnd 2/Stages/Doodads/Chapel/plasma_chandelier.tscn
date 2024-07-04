@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bw6dmd8kwhrv6"]
 
-[ext_resource type="PackedScene" path="res://Stages/Doodads/Chapel/plasma_sphere.tscn" id="1_jdk1l"]
+[ext_resource type="PackedScene" uid="uid://lyemo55glsx" path="res://Stages/Doodads/Chapel/plasma_sphere.tscn" id="1_jdk1l"]
 [ext_resource type="Texture2D" uid="uid://c4tn4jhymlli4" path="res://Textures/Unsorted/461223113.jpg" id="2_0qlhj"]
 [ext_resource type="Texture2D" uid="uid://087mbxj1qbw1" path="res://Textures/Unsorted/concrete-n-blood3.png" id="3_wd8lw"]
 

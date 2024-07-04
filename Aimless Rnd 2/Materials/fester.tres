@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://b3pxrakoqwrpa"]
+
+[ext_resource type="Texture2D" uid="uid://dsfn7i5tdtnwc" path="res://Textures/Unsorted/461223182.jpg" id="1_sgkqa"]
+[ext_resource type="Texture2D" uid="uid://bg1bb11u2ium4" path="res://Textures/Noise/Cracks/Cracks 11 - 512x512.png" id="2_twcip"]
+[ext_resource type="Texture2D" uid="uid://bii3q51gbdxgn" path="res://Textures/Noise/Milky/Milky 12 - 512x512.png" id="3_550db"]
+
+[resource]
+albedo_texture = ExtResource("1_sgkqa")
+detail_enabled = true
+detail_mask = ExtResource("3_550db")
+detail_blend_mode = 2
+detail_uv_layer = 1
+detail_albedo = ExtResource("2_twcip")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_scale = Vector3(0.2, 0.2, 0.2)
+uv2_triplanar = true
+texture_filter = 0

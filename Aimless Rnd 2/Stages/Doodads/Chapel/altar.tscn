@@ -1,0 +1,103 @@
+[gd_scene load_steps=14 format=3 uid="uid://dhiybef6ljeqx"]
+
+[ext_resource type="Texture2D" uid="uid://d3feyy4dvuoqi" path="res://Textures/Wood/wood1.png" id="1_s1rf8"]
+[ext_resource type="Texture2D" uid="uid://dfgxs3bvofmo" path="res://Textures/Unsorted/weave-blue-hair.png" id="2_dhckt"]
+[ext_resource type="Texture2D" uid="uid://c4tn4jhymlli4" path="res://Textures/Unsorted/461223113.jpg" id="3_apyhh"]
+[ext_resource type="Texture2D" uid="uid://d0u5wgk18yr5f" path="res://Textures/Unsorted/rock1.png" id="3_msfmb"]
+[ext_resource type="Texture2D" uid="uid://whyvqofa5w2h" path="res://Textures/Noise/Marble/Marble 5 - 512x512.png" id="4_67s16"]
+[ext_resource type="Texture2D" uid="uid://fdeaea85yeg" path="res://Textures/Noise/Marble/Marble 6 - 512x512.png" id="5_txlg0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_86ojo"]
+size = Vector3(4, 0.866211, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oask1"]
+albedo_texture = ExtResource("1_s1rf8")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igjiy"]
+albedo_texture = ExtResource("2_dhckt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xox52"]
+albedo_texture = ExtResource("1_s1rf8")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06uce"]
+albedo_color = Color(0.811765, 1, 1, 1)
+metallic = 1.0
+metallic_texture = ExtResource("3_apyhh")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p4sy2"]
+blend_mode = 1
+albedo_color = Color(0, 1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_be2mw"]
+albedo_texture = ExtResource("3_msfmb")
+detail_enabled = true
+detail_mask = ExtResource("5_txlg0")
+detail_blend_mode = 3
+detail_uv_layer = 1
+detail_albedo = ExtResource("4_67s16")
+uv1_triplanar = true
+uv2_triplanar = true
+uv2_world_triplanar = true
+
+[node name="Altar" type="RigidBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.316895, 0)
+shape = SubResource("BoxShape3D_86ojo")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+size = Vector3(4.25, 0.75, 1)
+material = SubResource("StandardMaterial3D_oask1")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
+size = Vector3(3.5, 0.75, 1.5)
+material = SubResource("StandardMaterial3D_igjiy")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1.25, 1, 0)
+radius = 0.25
+material = SubResource("StandardMaterial3D_xox52")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1.25, 1, 0)
+radius = 0.25
+material = SubResource("StandardMaterial3D_xox52")
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.25, 1, 0)
+inner_radius = 0.25
+outer_radius = 0.5
+sides = 6
+material = SubResource("StandardMaterial3D_06uce")
+
+[node name="CSGTorus3D2" type="CSGTorus3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.25, 1, 0)
+inner_radius = 0.25
+outer_radius = 0.5
+sides = 6
+material = SubResource("StandardMaterial3D_06uce")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1.25, 1.5, 0)
+radial_segments = 6
+rings = 3
+smooth_faces = false
+material = SubResource("StandardMaterial3D_p4sy2")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1.25, 1.5, 0)
+radial_segments = 6
+rings = 3
+smooth_faces = false
+material = SubResource("StandardMaterial3D_p4sy2")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.5, 0.75, -0.5)
+polygon = PackedVector2Array(0, 0, 1, 0.25, 1, 0)
+material = SubResource("StandardMaterial3D_be2mw")

@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://qm28lot5dtjr"]
+
+[ext_resource type="Texture2D" uid="uid://eksbitd0y6xq" path="res://Textures/Unsorted/concrete.png" id="1_ppduw"]
+[ext_resource type="Texture2D" uid="uid://cwq4onx0irshl" path="res://Textures/Noise/Voronoi/Voronoi 10 - 512x512.png" id="2_yjxdd"]
+[ext_resource type="Texture2D" uid="uid://bal70r7cffw2c" path="res://Textures/Noise/Cracks/Cracks 10 - 512x512.png" id="3_t0vcn"]
+
+[resource]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_ppduw")
+roughness = 0.29
+roughness_texture = ExtResource("3_t0vcn")
+detail_enabled = true
+detail_blend_mode = 3
+detail_uv_layer = 1
+detail_albedo = ExtResource("2_yjxdd")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_scale = Vector3(0.5, 0.5, 0.5)
+uv2_triplanar = true
+uv2_world_triplanar = true
+texture_filter = 0
