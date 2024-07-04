@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://bexsusptpilw7"]
+
+[ext_resource type="Texture2D" uid="uid://dfgxs3bvofmo" path="res://Textures/Unsorted/weave-blue-hair.png" id="1_gxbml"]
+[ext_resource type="Texture2D" uid="uid://bjvdmsry1qbhk" path="res://Textures/Unsorted/461223108.jpg" id="2_u6ec4"]
+[ext_resource type="Texture2D" uid="uid://ce3o171egso6o" path="res://Textures/Unsorted/weave-blue1-swirl.png" id="3_d6igd"]
+[ext_resource type="Texture2D" uid="uid://cbrs4io3tifp7" path="res://Textures/Unsorted/etched crystal texture.png" id="4_rbeq5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y02xe"]
+albedo_texture = ExtResource("1_gxbml")
+rim_tint = 0.0
+rim_texture = ExtResource("2_u6ec4")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vtfjk"]
+albedo_texture = ExtResource("3_d6igd")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ty50"]
+albedo_texture = ExtResource("4_rbeq5")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[node name="Rug1" type="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.05, 0)
+size = Vector3(4, 0.2, 6)
+material = SubResource("StandardMaterial3D_y02xe")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0.1, 0)
+operation = 2
+size = Vector3(0.2, 0.2, 6)
+material = SubResource("StandardMaterial3D_vtfjk")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9, 0.1, 0)
+operation = 2
+size = Vector3(0.2, 0.2, 6)
+material = SubResource("StandardMaterial3D_vtfjk")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19209e-07, 0.1, 2.9)
+operation = 2
+size = Vector3(3.6, 0.2, 0.2)
+material = SubResource("StandardMaterial3D_vtfjk")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19209e-07, 0.1, -2.9)
+operation = 2
+size = Vector3(3.6, 0.2, 0.2)
+material = SubResource("StandardMaterial3D_vtfjk")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+operation = 2
+radius = 1.2
+sides = 6
+material = SubResource("StandardMaterial3D_7ty50")

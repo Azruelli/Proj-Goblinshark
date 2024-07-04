@@ -1,0 +1,85 @@
+[gd_scene load_steps=11 format=3 uid="uid://b2b72kcsbpv48"]
+
+[ext_resource type="Texture2D" uid="uid://dfgxs3bvofmo" path="res://Textures/Unsorted/weave-blue-hair.png" id="1_425lx"]
+[ext_resource type="Texture2D" uid="uid://bjvdmsry1qbhk" path="res://Textures/Unsorted/461223108.jpg" id="2_kvj80"]
+[ext_resource type="Texture2D" uid="uid://ce3o171egso6o" path="res://Textures/Unsorted/weave-blue1-swirl.png" id="3_6x0rh"]
+[ext_resource type="Texture2D" uid="uid://cbrs4io3tifp7" path="res://Textures/Unsorted/etched crystal texture.png" id="4_1sals"]
+[ext_resource type="Texture2D" uid="uid://c4tn4jhymlli4" path="res://Textures/Unsorted/461223113.jpg" id="5_t20t3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y02xe"]
+albedo_texture = ExtResource("1_425lx")
+rim_tint = 0.0
+rim_texture = ExtResource("2_kvj80")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vtfjk"]
+albedo_texture = ExtResource("3_6x0rh")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ty50"]
+albedo_texture = ExtResource("4_1sals")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ih7x"]
+albedo_color = Color(0.811765, 1, 1, 1)
+metallic = 1.0
+metallic_texture = ExtResource("5_t20t3")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bayao"]
+blend_mode = 1
+albedo_color = Color(0, 1, 1, 1)
+
+[node name="Rug1" type="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.05, 0)
+size = Vector3(4, 0.2, 6)
+material = SubResource("StandardMaterial3D_y02xe")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0.1, 0)
+operation = 2
+size = Vector3(0.2, 0.2, 6)
+material = SubResource("StandardMaterial3D_vtfjk")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9, 0.1, 0)
+operation = 2
+size = Vector3(0.2, 0.2, 6)
+material = SubResource("StandardMaterial3D_vtfjk")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19209e-07, 0.1, 2.9)
+operation = 2
+size = Vector3(3.6, 0.2, 0.2)
+material = SubResource("StandardMaterial3D_vtfjk")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19209e-07, 0.1, -2.9)
+operation = 2
+size = Vector3(3.6, 0.2, 0.2)
+material = SubResource("StandardMaterial3D_vtfjk")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+operation = 2
+radius = 1.2
+sides = 6
+material = SubResource("StandardMaterial3D_7ty50")
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.49012e-08, 0)
+sides = 6
+ring_sides = 3
+material = SubResource("StandardMaterial3D_5ih7x")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+radius = 0.7
+height = 0.2
+sides = 6
+material = SubResource("StandardMaterial3D_bayao")

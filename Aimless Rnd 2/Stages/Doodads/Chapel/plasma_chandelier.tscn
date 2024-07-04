@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://bw6dmd8kwhrv6"]
+
+[ext_resource type="PackedScene" path="res://Stages/Doodads/Chapel/plasma_sphere.tscn" id="1_jdk1l"]
+[ext_resource type="Texture2D" uid="uid://c4tn4jhymlli4" path="res://Textures/Unsorted/461223113.jpg" id="2_0qlhj"]
+[ext_resource type="Texture2D" uid="uid://087mbxj1qbw1" path="res://Textures/Unsorted/concrete-n-blood3.png" id="3_wd8lw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5seq"]
+albedo_texture = ExtResource("3_wd8lw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rk8jo"]
+albedo_color = Color(0.811765, 1, 1, 1)
+metallic = 1.0
+metallic_texture = ExtResource("2_0qlhj")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[node name="Plasma Chandelier" type="Node3D"]
+
+[node name="Plasma Sphere" parent="." instance=ExtResource("1_jdk1l")]
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+use_collision = true
+inner_radius = 0.4
+sides = 6
+ring_sides = 3
+material = SubResource("StandardMaterial3D_o5seq")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGTorus3D"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0.05, 2.75167, 2.35)
+size = Vector3(0.1, 6.4, 0.1)
+material = SubResource("StandardMaterial3D_o5seq")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGTorus3D"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0.05, 2.40526, -2.15)
+size = Vector3(0.1, 5.6, 0.1)
+material = SubResource("StandardMaterial3D_o5seq")
+
+[node name="CSGTorus3D2" type="CSGTorus3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+use_collision = true
+outer_radius = 1.1
+sides = 6
+ring_sides = 3
+material = SubResource("StandardMaterial3D_rk8jo")

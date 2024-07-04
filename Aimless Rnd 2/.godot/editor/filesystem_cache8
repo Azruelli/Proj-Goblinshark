@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1720120216
+::res://::1720122405
 BulletTimer.gd::GDScript::-1::1720111504::0::1::::<>Timer<>::
 bullet_ray.tscn::PackedScene::8017088909363861707::1720111504::0::1::::<><>::res://MGBullet.gd
 crosshair.gd::GDScript::-1::1720111504::0::1::::cross_hair<>Control<>::
 crosshair.tscn::PackedScene::6688318496416034386::1720111504::0::1::::<><>::res://crosshair.gd
-Debug.tscn::PackedScene::4512759216785664927::1720117791::0::1::::<><>::uid://diqcix80tn6ba::::res://Player.tscn<>uid://dt2ggbjsag7lm::::res://targetable_node.tscn<>uid://b6apxs0m53t2s::::res://DummyEnemy.tscn
+Debug.tscn::PackedScene::4512759216785664927::1720122401::0::1::::<><>::uid://diqcix80tn6ba::::res://Player.tscn<>uid://dt2ggbjsag7lm::::res://targetable_node.tscn<>uid://b6apxs0m53t2s::::res://DummyEnemy.tscn
 DummyEnemy.gd::GDScript::-1::1720111504::0::1::::<>CharacterBody3D<>::
 DummyEnemy.tscn::PackedScene::4563227649250266100::1720111504::0::1::::<><>::res://DummyEnemy.gd
 hand.tscn::PackedScene::2942619992343942687::1720111504::0::1::::<><>::
@@ -13,7 +13,7 @@ machine_gun.gd::GDScript::-1::1720111504::0::1::::<>MeshInstance3D<>::
 machine_gun.tscn::PackedScene::5697371524270939076::1720111504::0::1::::<><>::res://machine_gun.gd
 MGBullet.gd::GDScript::-1::1720111504::0::1::::<>RayCast3D<>::
 Player.gd::GDScript::-1::1720111504::0::1::::Player<>CharacterBody3D<>::
-Player.tscn::PackedScene::7753939824762712598::1720117791::0::1::::<><>::res://Player.gd<>res://Player/Player States/FiniteStateMachine.gd<>res://Player/Player Camera/Camera3D.gd<>uid://bh6oryxhdrptf::::res://hand.tscn<>res://Player/Player States/player_idle.gd<>res://Player/Player States/player_walking.gd<>uid://cnf342mhj32pk::::res://machine_gun.tscn<>res://Player/Player Camera/CameraUnlocked.gd<>uid://dmhsjvgbwujh0::::res://bullet_ray.tscn<>res://Player/Player States/player_air.gd<>uid://c2j4vmrajhjiw::::res://crosshair.tscn
+Player.tscn::PackedScene::7753939824762712598::1720122401::0::1::::<><>::res://Player.gd<>res://Player/Player States/FiniteStateMachine.gd<>res://Player/Player Camera/Camera3D.gd<>uid://bh6oryxhdrptf::::res://hand.tscn<>res://Player/Player States/player_idle.gd<>res://Player/Player States/player_walking.gd<>uid://cnf342mhj32pk::::res://machine_gun.tscn<>res://Player/Player Camera/CameraUnlocked.gd<>uid://dmhsjvgbwujh0::::res://bullet_ray.tscn<>res://Player/Player States/player_air.gd<>uid://c2j4vmrajhjiw::::res://crosshair.tscn
 TargetableNode.gd::GDScript::-1::1720111504::0::1::::Targetable<>Node3D<>::
 targetable_node.tscn::PackedScene::8548963363526261298::1720111504::0::1::::<><>::res://TargetableNode.gd
 ::res://Materials/::1720112086
@@ -33,12 +33,18 @@ player_air.gd::GDScript::-1::1720111504::0::1::::Air<>PlayerState<>::
 player_idle.gd::GDScript::-1::1720111504::0::1::::Idle<>PlayerState<>::
 player_walking.gd::GDScript::-1::1720111504::0::1::::Walking<>PlayerState<>::
 State.gd::GDScript::-1::1720111504::0::1::::State<>Node<>::
-::res://Stages/::1720117809
-chapel.tscn::PackedScene::6512923053618481145::1720117809::0::1::::<><>::uid://dsfn7i5tdtnwc::::res://Textures/Unsorted/461223182.jpg<>uid://btorh35lnjjub::::res://Textures/Unsorted/461223101.jpg<>uid://diqcix80tn6ba::::res://Player.tscn<>uid://cirnp6cwvmhrb::::res://Textures/Dev/Dark/texture_08.png<>uid://35qwr26v10y7::::res://Stages/Doodads/Chapel/chapel_light.tscn<>uid://7a72ywj87vnj::::res://Stages/Doodads/Chapel/Pew.tscn
+::res://Stages/::1720122401
+chapel.tscn::PackedScene::6512923053618481145::1720122401::0::1::::<><>::uid://dsfn7i5tdtnwc::::res://Textures/Unsorted/461223182.jpg<>uid://btorh35lnjjub::::res://Textures/Unsorted/461223101.jpg<>uid://diqcix80tn6ba::::res://Player.tscn<>uid://cirnp6cwvmhrb::::res://Textures/Dev/Dark/texture_08.png<>uid://35qwr26v10y7::::res://Stages/Doodads/Chapel/chapel_light.tscn<>uid://7a72ywj87vnj::::res://Stages/Doodads/Chapel/Pew.tscn<>uid://ftegjul40k5::::res://Stages/Doodads/Chapel/banner.tscn<>res://Stages/Doodads/Chapel/plasma_lamp.tscn<>uid://bw6dmd8kwhrv6::::res://Stages/Doodads/Chapel/plasma_chandelier.tscn<>res://Stages/Doodads/Chapel/rug_1.tscn<>res://Stages/Doodads/Chapel/rug_2.tscn
 ::res://Stages/Doodads/::1720115324
-::res://Stages/Doodads/Chapel/::1720117791
-chapel_light.tscn::PackedScene::2028230649881155700::1720117791::0::1::::<><>::
-Pew.tscn::PackedScene::2248035451621396295::1720117791::0::1::::<><>::uid://d3feyy4dvuoqi::::res://Textures/Wood/wood1.png<>uid://dfgxs3bvofmo::::res://Textures/Unsorted/weave-blue-hair.png<>uid://bjvdmsry1qbhk::::res://Textures/Unsorted/461223108.jpg<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg
+::res://Stages/Doodads/Chapel/::1720122401
+banner.tscn::PackedScene::11482984776399150::1720122401::0::1::::<><>::uid://dfgxs3bvofmo::::res://Textures/Unsorted/weave-blue-hair.png<>uid://bjvdmsry1qbhk::::res://Textures/Unsorted/461223108.jpg<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg<>uid://d3feyy4dvuoqi::::res://Textures/Wood/wood1.png
+chapel_light.tscn::PackedScene::2028230649881155700::1720122401::0::1::::<><>::
+Pew.tscn::PackedScene::2248035451621396295::1720122401::0::1::::<><>::uid://d3feyy4dvuoqi::::res://Textures/Wood/wood1.png<>uid://dfgxs3bvofmo::::res://Textures/Unsorted/weave-blue-hair.png<>uid://bjvdmsry1qbhk::::res://Textures/Unsorted/461223108.jpg<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg
+plasma_chandelier.tscn::PackedScene::3994774743643470021::1720122401::0::1::::<><>::res://Stages/Doodads/Chapel/plasma_sphere.tscn<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg<>uid://087mbxj1qbw1::::res://Textures/Unsorted/concrete-n-blood3.png
+plasma_lamp.tscn::PackedScene::7154353242483399591::1720121888::0::1::::<><>::uid://cnt5ixwidoqlc::::res://Textures/Wood/vegetation_tree_bark_63.png<>uid://pcknmdvevplp::::res://Textures/Wood/wood5.png<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg
+plasma_sphere.tscn::PackedScene::24173159607537783::1720121884::0::1::::<><>::res://Example World/Scripts/physic_objects/targetable_objects.gd
+rug_1.tscn::PackedScene::4285575529020893335::1720121895::0::1::::<><>::uid://dfgxs3bvofmo::::res://Textures/Unsorted/weave-blue-hair.png<>uid://bjvdmsry1qbhk::::res://Textures/Unsorted/461223108.jpg<>uid://ce3o171egso6o::::res://Textures/Unsorted/weave-blue1-swirl.png<>uid://cbrs4io3tifp7::::res://Textures/Unsorted/etched crystal texture.png<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg
+rug_2.tscn::PackedScene::2715786337812514568::1720121895::0::1::::<><>::uid://dfgxs3bvofmo::::res://Textures/Unsorted/weave-blue-hair.png<>uid://bjvdmsry1qbhk::::res://Textures/Unsorted/461223108.jpg<>uid://ce3o171egso6o::::res://Textures/Unsorted/weave-blue1-swirl.png<>uid://cbrs4io3tifp7::::res://Textures/Unsorted/etched crystal texture.png
 ::res://Textures/::1720112078
 ::res://Textures/Bricks/::1720112042
 ::res://Textures/Bricks/BrickWall (1)/::1720112059
