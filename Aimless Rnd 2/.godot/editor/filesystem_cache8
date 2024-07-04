@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1720126384
+::res://::1720131007
 BulletTimer.gd::GDScript::-1::1720111504::0::1::::<>Timer<>::
 bullet_ray.tscn::PackedScene::8017088909363861707::1720111504::0::1::::<><>::res://MGBullet.gd
 crosshair.gd::GDScript::-1::1720111504::0::1::::cross_hair<>Control<>::
 crosshair.tscn::PackedScene::6688318496416034386::1720122748::0::1::::<><>::res://crosshair.gd
-Debug.tscn::PackedScene::4512759216785664927::1720126383::0::1::::<><>::uid://diqcix80tn6ba::::res://Player.tscn<>uid://dt2ggbjsag7lm::::res://targetable_node.tscn<>uid://b6apxs0m53t2s::::res://DummyEnemy.tscn<>uid://d0f31ob8ps6al::::res://Zealot/zealot.tscn
+Debug.tscn::PackedScene::4512759216785664927::1720127289::0::1::::<><>::uid://diqcix80tn6ba::::res://Player.tscn<>uid://dt2ggbjsag7lm::::res://targetable_node.tscn<>uid://b6apxs0m53t2s::::res://DummyEnemy.tscn<>uid://d0f31ob8ps6al::::res://Zealot/zealot.tscn
 DummyEnemy.gd::GDScript::-1::1720111504::0::1::::<>CharacterBody3D<>::
 DummyEnemy.tscn::PackedScene::4563227649250266100::1720111504::0::1::::<><>::res://DummyEnemy.gd
 hand.tscn::PackedScene::2942619992343942687::1720111504::0::1::::<><>::
@@ -13,15 +13,15 @@ machine_gun.gd::GDScript::-1::1720111504::0::1::::<>MeshInstance3D<>::
 machine_gun.tscn::PackedScene::5697371524270939076::1720111504::0::1::::<><>::res://machine_gun.gd
 MGBullet.gd::GDScript::-1::1720111504::0::1::::<>RayCast3D<>::
 Player.gd::GDScript::-1::1720122748::0::1::::Player<>CharacterBody3D<>::
-Player.tscn::PackedScene::7753939824762712598::1720126384::0::1::::<><>::res://Player.gd<>res://Player/Player States/FiniteStateMachine.gd<>res://Player/Player Camera/Camera3D.gd<>uid://bh6oryxhdrptf::::res://hand.tscn<>res://Player/Player States/player_idle.gd<>res://Player/Player States/player_walking.gd<>uid://cnf342mhj32pk::::res://machine_gun.tscn<>res://Player/Player Camera/CameraUnlocked.gd<>uid://dmhsjvgbwujh0::::res://bullet_ray.tscn<>res://Player/Player States/player_air.gd<>res://Player/Player Camera/CameraLocked.gd<>uid://c2j4vmrajhjiw::::res://crosshair.tscn
+Player.tscn::PackedScene::7753939824762712598::1720127289::0::1::::<><>::res://Player.gd<>res://Player/Player States/FiniteStateMachine.gd<>res://Player/Player Camera/Camera3D.gd<>uid://bh6oryxhdrptf::::res://hand.tscn<>res://Player/Player States/player_idle.gd<>res://Player/Player States/player_walking.gd<>uid://cnf342mhj32pk::::res://machine_gun.tscn<>res://Player/Player Camera/CameraUnlocked.gd<>uid://dmhsjvgbwujh0::::res://bullet_ray.tscn<>res://Player/Player States/player_air.gd<>res://Player/Player Camera/CameraLocked.gd<>uid://c2j4vmrajhjiw::::res://crosshair.tscn
 TargetableNode.gd::GDScript::-1::1720111504::0::1::::Targetable<>Node3D<>::
 targetable_node.tscn::PackedScene::8548963363526261298::1720122748::0::1::::<><>::res://TargetableNode.gd
 zealot_projectile.gd::GDScript::-1::1720122748::0::1::::<>Node3D<>::
 zealot_projectile.tscn::PackedScene::302578153257069979::1720122748::0::1::::<><>::res://zealot_projectile.gd
-::res://Materials/::1720125540
-CrackedStone.tres::StandardMaterial3D::1149492921548408295::1720124982::0::1::::<><>::uid://eksbitd0y6xq::::res://Textures/Unsorted/concrete.png<>uid://cwq4onx0irshl::::res://Textures/Noise/Voronoi/Voronoi 10 - 512x512.png<>uid://bal70r7cffw2c::::res://Textures/Noise/Cracks/Cracks 10 - 512x512.png
+::res://Materials/::1720127395
 Bricks.tres::StandardMaterial3D::8474902389609235111::1720125540::0::1::::<><>::uid://nim2nfjpwnpq::::res://Textures/Bricks/BrickWall (9)/BrickWall (9)_BaseColor.png<>uid://jjep07iadan8::::res://Textures/Bricks/BrickWall (9)/BrickWall (9)_AmbientOcclusion.png<>uid://y2udoqoedh0m::::res://Textures/Noise/Cracks/Cracks 13 - 512x512.png<>uid://bg36xayts2n82::::res://Textures/Bricks/BrickWall (9)/BrickWall (9)_Normal.png
-fester_1.tscn::PackedScene::8095602848952535787::1720127061::0::1::::<><>::uid://dsfn7i5tdtnwc::::res://Textures/Unsorted/461223182.jpg<>uid://bg1bb11u2ium4::::res://Textures/Noise/Cracks/Cracks 11 - 512x512.png<>uid://bii3q51gbdxgn::::res://Textures/Noise/Milky/Milky 12 - 512x512.png<>uid://damm5avojxmkq::::res://Textures/Unsorted/pattern-wiggles-red.png<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg
+CrackedStone.tres::StandardMaterial3D::1149492921548408295::1720124982::0::1::::<><>::uid://eksbitd0y6xq::::res://Textures/Unsorted/concrete.png<>uid://cwq4onx0irshl::::res://Textures/Noise/Voronoi/Voronoi 10 - 512x512.png<>uid://bal70r7cffw2c::::res://Textures/Noise/Cracks/Cracks 10 - 512x512.png
+fester.tres::StandardMaterial3D::4384100837305322674::1720127395::0::1::::<><>::uid://dsfn7i5tdtnwc::::res://Textures/Unsorted/461223182.jpg<>uid://bg1bb11u2ium4::::res://Textures/Noise/Cracks/Cracks 11 - 512x512.png<>uid://bii3q51gbdxgn::::res://Textures/Noise/Milky/Milky 12 - 512x512.png
 ::res://Player/::1720111504
 ::res://Player/Player Camera/::1720122748
 Camera3D.gd::GDScript::-1::1720111504::0::1::::<>Camera3D<>::
@@ -38,17 +38,18 @@ player_air.gd::GDScript::-1::1720122748::0::1::::Air<>PlayerState<>::
 player_idle.gd::GDScript::-1::1720122748::0::1::::Idle<>PlayerState<>::
 player_walking.gd::GDScript::-1::1720122748::0::1::::Walking<>PlayerState<>::
 State.gd::GDScript::-1::1720122748::0::1::::State<>Node<>::
-::res://Stages/::1720126433
-chapel.tscn::PackedScene::6512923053618481145::1720126497::0::1::::<><>::uid://dsfn7i5tdtnwc::::res://Textures/Unsorted/461223182.jpg<>uid://btorh35lnjjub::::res://Textures/Unsorted/461223101.jpg<>uid://diqcix80tn6ba::::res://Player.tscn<>uid://ds0kn0hbb7kxb::::res://Materials/Bricks.tres<>uid://cirnp6cwvmhrb::::res://Textures/Dev/Dark/texture_08.png<>uid://qm28lot5dtjr::::res://Materials/CrackedStone.tres<>uid://35qwr26v10y7::::res://Stages/Doodads/Chapel/chapel_light.tscn<>uid://7a72ywj87vnj::::res://Stages/Doodads/Chapel/Pew.tscn<>uid://ftegjul40k5::::res://Stages/Doodads/Chapel/banner.tscn<>uid://c86vfgpl2pylj::::res://Stages/Doodads/Chapel/plasma_lamp.tscn<>uid://bw6dmd8kwhrv6::::res://Stages/Doodads/Chapel/plasma_chandelier.tscn<>uid://d3feyy4dvuoqi::::res://Textures/Wood/wood1.png<>uid://b2b72kcsbpv48::::res://Stages/Doodads/Chapel/rug_1.tscn<>uid://bexsusptpilw7::::res://Stages/Doodads/Chapel/rug_2.tscn<>uid://dhiybef6ljeqx::::res://Stages/Doodads/Chapel/altar.tscn
+::res://Stages/::1720127870
+chapel.tscn::PackedScene::6512923053618481145::1720127870::0::1::::<><>::uid://dsfn7i5tdtnwc::::res://Textures/Unsorted/461223182.jpg<>uid://btorh35lnjjub::::res://Textures/Unsorted/461223101.jpg<>uid://diqcix80tn6ba::::res://Player.tscn<>uid://ds0kn0hbb7kxb::::res://Materials/Bricks.tres<>uid://cirnp6cwvmhrb::::res://Textures/Dev/Dark/texture_08.png<>uid://qm28lot5dtjr::::res://Materials/CrackedStone.tres<>uid://35qwr26v10y7::::res://Stages/Doodads/Chapel/chapel_light.tscn<>uid://b3pxrakoqwrpa::::res://Materials/fester.tres<>uid://7a72ywj87vnj::::res://Stages/Doodads/Chapel/Pew.tscn<>uid://ftegjul40k5::::res://Stages/Doodads/Chapel/banner.tscn<>uid://c86vfgpl2pylj::::res://Stages/Doodads/Chapel/plasma_lamp.tscn<>uid://bw6dmd8kwhrv6::::res://Stages/Doodads/Chapel/plasma_chandelier.tscn<>uid://d3feyy4dvuoqi::::res://Textures/Wood/wood1.png<>uid://b2b72kcsbpv48::::res://Stages/Doodads/Chapel/rug_1.tscn<>uid://bexsusptpilw7::::res://Stages/Doodads/Chapel/rug_2.tscn<>uid://dhiybef6ljeqx::::res://Stages/Doodads/Chapel/altar.tscn<>uid://dnltnp64761bj::::res://Stages/Doodads/Chapel/fester_1.tscn
 ::res://Stages/Doodads/::1720115324
-::res://Stages/Doodads/Chapel/::1720126384
-banner.tscn::PackedScene::11482984776399150::1720126384::0::1::::<><>::uid://dfgxs3bvofmo::::res://Textures/Unsorted/weave-blue-hair.png<>uid://bjvdmsry1qbhk::::res://Textures/Unsorted/461223108.jpg<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg<>uid://d3feyy4dvuoqi::::res://Textures/Wood/wood1.png
-chapel_light.tscn::PackedScene::2028230649881155700::1720126384::0::1::::<><>::uid://emqyh2tg7c52::::res://Textures/Unsorted/461223124.jpg
-Pew.tscn::PackedScene::2248035451621396295::1720126384::0::1::::<><>::uid://d3feyy4dvuoqi::::res://Textures/Wood/wood1.png<>uid://dfgxs3bvofmo::::res://Textures/Unsorted/weave-blue-hair.png<>uid://bjvdmsry1qbhk::::res://Textures/Unsorted/461223108.jpg<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg
-plasma_chandelier.tscn::PackedScene::3994774743643470021::1720126384::0::1::::<><>::uid://lyemo55glsx::::res://Stages/Doodads/Chapel/plasma_sphere.tscn<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg<>uid://087mbxj1qbw1::::res://Textures/Unsorted/concrete-n-blood3.png
-plasma_lamp.tscn::PackedScene::7154353242483399591::1720126384::0::1::::<><>::uid://cnt5ixwidoqlc::::res://Textures/Wood/vegetation_tree_bark_63.png<>uid://pcknmdvevplp::::res://Textures/Wood/wood5.png<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg
+::res://Stages/Doodads/Chapel/::1720127397
+altar.tscn::PackedScene::7668558191439287519::1720127289::0::1::::<><>::uid://d3feyy4dvuoqi::::res://Textures/Wood/wood1.png<>uid://dfgxs3bvofmo::::res://Textures/Unsorted/weave-blue-hair.png<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg<>uid://d0u5wgk18yr5f::::res://Textures/Unsorted/rock1.png<>uid://whyvqofa5w2h::::res://Textures/Noise/Marble/Marble 5 - 512x512.png<>uid://fdeaea85yeg::::res://Textures/Noise/Marble/Marble 6 - 512x512.png
+banner.tscn::PackedScene::11482984776399150::1720127289::0::1::::<><>::uid://dfgxs3bvofmo::::res://Textures/Unsorted/weave-blue-hair.png<>uid://bjvdmsry1qbhk::::res://Textures/Unsorted/461223108.jpg<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg<>uid://d3feyy4dvuoqi::::res://Textures/Wood/wood1.png
+chapel_light.tscn::PackedScene::2028230649881155700::1720127289::0::1::::<><>::uid://emqyh2tg7c52::::res://Textures/Unsorted/461223124.jpg
+fester_1.tscn::PackedScene::8095602848952535787::1720127397::0::1::::<><>::uid://b3pxrakoqwrpa::::res://Materials/fester.tres<>uid://damm5avojxmkq::::res://Textures/Unsorted/pattern-wiggles-red.png<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg
+Pew.tscn::PackedScene::2248035451621396295::1720127289::0::1::::<><>::uid://d3feyy4dvuoqi::::res://Textures/Wood/wood1.png<>uid://dfgxs3bvofmo::::res://Textures/Unsorted/weave-blue-hair.png<>uid://bjvdmsry1qbhk::::res://Textures/Unsorted/461223108.jpg<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg
+plasma_chandelier.tscn::PackedScene::3994774743643470021::1720127289::0::1::::<><>::uid://lyemo55glsx::::res://Stages/Doodads/Chapel/plasma_sphere.tscn<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg<>uid://087mbxj1qbw1::::res://Textures/Unsorted/concrete-n-blood3.png
+plasma_lamp.tscn::PackedScene::7154353242483399591::1720127289::0::1::::<><>::uid://cnt5ixwidoqlc::::res://Textures/Wood/vegetation_tree_bark_63.png<>uid://pcknmdvevplp::::res://Textures/Wood/wood5.png<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg
 plasma_sphere.tscn::PackedScene::24173159607537783::1720121884::0::1::::<><>::res://Example World/Scripts/physic_objects/targetable_objects.gd
-altar.tscn::PackedScene::7668558191439287519::1720126384::0::1::::<><>::uid://d3feyy4dvuoqi::::res://Textures/Wood/wood1.png<>uid://dfgxs3bvofmo::::res://Textures/Unsorted/weave-blue-hair.png<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg<>uid://d0u5wgk18yr5f::::res://Textures/Unsorted/rock1.png<>uid://whyvqofa5w2h::::res://Textures/Noise/Marble/Marble 5 - 512x512.png<>uid://fdeaea85yeg::::res://Textures/Noise/Marble/Marble 6 - 512x512.png
 rug_1.tscn::PackedScene::4285575529020893335::1720121895::0::1::::<><>::uid://dfgxs3bvofmo::::res://Textures/Unsorted/weave-blue-hair.png<>uid://bjvdmsry1qbhk::::res://Textures/Unsorted/461223108.jpg<>uid://ce3o171egso6o::::res://Textures/Unsorted/weave-blue1-swirl.png<>uid://cbrs4io3tifp7::::res://Textures/Unsorted/etched crystal texture.png<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg
 rug_2.tscn::PackedScene::2715786337812514568::1720121895::0::1::::<><>::uid://dfgxs3bvofmo::::res://Textures/Unsorted/weave-blue-hair.png<>uid://bjvdmsry1qbhk::::res://Textures/Unsorted/461223108.jpg<>uid://ce3o171egso6o::::res://Textures/Unsorted/weave-blue1-swirl.png<>uid://cbrs4io3tifp7::::res://Textures/Unsorted/etched crystal texture.png
 ::res://Textures/::1720112078
@@ -283,7 +284,7 @@ Dirt_04.png::CompressedTexture2D::4669096380148636489::1554241051::1720112050::1
 Dirt_04_Nrm.png::CompressedTexture2D::6481435880108170071::1554241051::1720112050::1::::<><>::
 ::res://Textures/Fabric/::1720099806
 ::res://Textures/Noise/::1720112041
-::res://Textures/Noise/Cracks/::1720125396
+::res://Textures/Noise/Cracks/::1720126636
 Cracks 1 - 512x512.png::CompressedTexture2D::2131197347388325444::1625589925::1720112094::1::::<><>::
 Cracks 2 - 512x512.png::CompressedTexture2D::7779164353923786149::1625590017::1720124411::1::::<><>::
 Cracks 3 - 512x512.png::CompressedTexture2D::6121029317815437232::1625590064::1720112094::1::::<><>::
@@ -388,7 +389,7 @@ Melt 11 - 512x512.png::CompressedTexture2D::1661435123228715562::1625588056::172
 Melt 12 - 512x512.png::CompressedTexture2D::4191896309941431471::1625588166::1720112095::1::::<><>::
 Melt 13 - 512x512.png::CompressedTexture2D::4679712323091424658::1625588315::1720112095::1::::<><>::
 Melt 14 - 512x512.png::CompressedTexture2D::2198821617164701464::1625588356::1720112095::1::::<><>::
-::res://Textures/Noise/Milky/::1720124649
+::res://Textures/Noise/Milky/::1720126683
 Milky 1 - 512x512.png::CompressedTexture2D::2201361833996975368::1625563118::1720112094::1::::<><>::
 Milky 2 - 512x512.png::CompressedTexture2D::8425071560945209316::1625563141::1720112094::1::::<><>::
 Milky 3 - 512x512.png::CompressedTexture2D::5139685015942544989::1625563218::1720112094::1::::<><>::
@@ -684,7 +685,7 @@ RoofTexture (100)_BaseColor.png::CompressedTexture2D::991610821654394471::171464
 RoofTexture (100)_Height.png::CompressedTexture2D::5055966066400476479::1714812376::1720112049::1::::<><>::
 RoofTexture (100)_Normal.png::CompressedTexture2D::9203292347907638451::1714812378::1720112050::1::::<><>::
 RoofTexture (100)_Roughness.png::CompressedTexture2D::1470355454834815679::1714812378::1720112049::1::::<><>::
-::res://Textures/Unsorted/::1720124736
+::res://Textures/Unsorted/::1720126922
 461223101.jpg::CompressedTexture2D::3749956208322380741::1265643326::1720112172::1::::<><>::
 461223102.jpg::CompressedTexture2D::2205383229804711233::1265643320::1720112049::1::::<><>::
 461223103.jpg::CompressedTexture2D::7871166284369165850::1265643316::1720112049::1::::<><>::

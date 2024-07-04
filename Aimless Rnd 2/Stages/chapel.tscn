@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cy155kfqv65ld"]
+[gd_scene load_steps=26 format=3 uid="uid://cy155kfqv65ld"]
 
 [ext_resource type="Texture2D" uid="uid://dsfn7i5tdtnwc" path="res://Textures/Unsorted/461223182.jpg" id="1_ty52g"]
 [ext_resource type="Texture2D" uid="uid://btorh35lnjjub" path="res://Textures/Unsorted/461223101.jpg" id="2_4cqjw"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bexsusptpilw7" path="res://Stages/Doodads/Chapel/rug_2.tscn" id="11_ye2p1"]
 [ext_resource type="PackedScene" uid="uid://dhiybef6ljeqx" path="res://Stages/Doodads/Chapel/altar.tscn" id="12_8dcb8"]
 [ext_resource type="PackedScene" uid="uid://dnltnp64761bj" path="res://Stages/Doodads/Chapel/fester_1.tscn" id="16_qt8mg"]
+[ext_resource type="Script" path="res://Stages/Area3D.gd" id="18_pjhv6"]
 
 [sub_resource type="Environment" id="Environment_ltn51"]
 ssao_enabled = true
@@ -57,6 +58,9 @@ uv1_triplanar = true
 uv1_world_triplanar = true
 uv2_triplanar = true
 uv2_world_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p6mha"]
+size = Vector3(3.81999, 1.24768, 3.9189)
 
 [node name="Chapel" type="Node3D"]
 
@@ -172,12 +176,28 @@ radius = 5.0
 sides = 6
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="Chapel/Geometry"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 3.5, 14)
 lod_bias = 128.0
 ignore_occlusion_culling = true
 use_collision = true
-size = Vector3(1, 18, 40)
+size = Vector3(1, 13, 40)
 material = SubResource("StandardMaterial3D_wqmeg")
+
+[node name="CSGBox3D25" type="CSGBox3D" parent="Chapel/Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -5.5, 17)
+lod_bias = 128.0
+ignore_occlusion_culling = true
+use_collision = true
+size = Vector3(1, 5, 34)
+material = SubResource("StandardMaterial3D_wqmeg")
+
+[node name="CSGBox3D26" type="CSGBox3D" parent="Chapel/Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -5.5, -2.5)
+lod_bias = 128.0
+ignore_occlusion_culling = true
+use_collision = true
+size = Vector3(1, 5, 5)
+material = ExtResource("6_81d7e")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5, -5.5)
@@ -276,12 +296,20 @@ size = Vector3(22.3213, 1, 4)
 material = ExtResource("4_shx3b")
 
 [node name="CSGBox3D23" type="CSGBox3D" parent="Chapel/Geometry"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.33936, -7.5, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.50001, -7.5, -2)
 lod_bias = 128.0
 ignore_occlusion_culling = true
 use_collision = true
-size = Vector3(22.3213, 1, 4)
+size = Vector3(22, 1, 4)
 material = ExtResource("4_shx3b")
+
+[node name="CSGBox3D24" type="CSGBox3D" parent="Chapel/Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, -7.5, -2)
+lod_bias = 128.0
+ignore_occlusion_culling = true
+use_collision = true
+size = Vector3(6, 1, 4)
+material = ExtResource("6_81d7e")
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -5, 5.5)
@@ -430,10 +458,46 @@ operation = 2
 radius = 2.0
 material = ExtResource("6_81d7e")
 
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="Chapel/Geometry"]
+transform = Transform3D(-5.30062e-08, 4, 0, -1.21264, -1.74846e-07, 0, 0, 0, 1.27734, -14, -5.69601, -2.28165)
+radius = 2.0
+height = 1.88238
+material = ExtResource("6_81d7e")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Chapel/Geometry/CSGCylinder3D4"]
+transform = Transform3D(0.672842, 0, 0, 0, 1, 0, 0, 0, 0.65592, 0, 0, 0)
+operation = 2
+radius = 2.0
+material = ExtResource("6_81d7e")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Chapel/Geometry/CSGCylinder3D4/CSGCylinder3D3"]
+transform = Transform3D(0.999935, 0, 0, -3.95239e-13, 1, 0, 0, 0, 1, 1.99421, -0.618164, 0.099762)
+size = Vector3(2.08594, 0.771484, 3.94672)
+material = ExtResource("6_81d7e")
+
 [node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Chapel/Geometry"]
 transform = Transform3D(-0.965926, -0.258819, 0, 0.258819, -0.965926, 0, 0, 0, 1, -9, -4.54727, -1.57413)
 height = 1.54129
 cone = true
+material = ExtResource("6_81d7e")
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="Chapel/Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -8, -2)
+radius = 2.39626
+height = 1.93987
+material = ExtResource("6_81d7e")
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="Chapel/Geometry/CSGCylinder3D5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.390541, 0, 0)
+operation = 2
+radius = 1.44361
+height = 1.93987
+material = ExtResource("6_81d7e")
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="Chapel/Geometry/CSGCylinder3D5"]
+transform = Transform3D(0.999895, 0.000480996, -0.0145043, -0.00018641, 0.999794, 0.0203051, 0.0145111, -0.0203002, 0.999689, -0.10095, 0.931538, -0.221505)
+inner_radius = 1.01358
+outer_radius = 2.53901
 material = ExtResource("6_81d7e")
 
 [node name="Doodads" type="Node" parent="Chapel"]
@@ -663,3 +727,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9794, -5.88739, -2)
 collision_layer = 2
 mass = 0.1
 gravity_scale = 0.1
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -7, -2)
+script = ExtResource("18_pjhv6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.999949, 0.00469951, 0.00897201, -0.00468926, 0.999988, -0.00116373, -0.00897737, 0.00112163, 0.999959, -0.576632, -2.36296, -0.0628736)
+shape = SubResource("BoxShape3D_p6mha")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
