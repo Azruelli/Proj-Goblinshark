@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://35qwr26v10y7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0sa43"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sb0kl"]
+albedo_color = Color(0, 1, 1, 1)
+emission_enabled = true
+emission = Color(0, 1, 1, 1)
+emission_energy_multiplier = 4.0
+
+[node name="Chapel Light" type="RigidBody3D"]
+gravity_scale = 0.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_0sa43")
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="."]
+sides = 6
+smooth_faces = false
+material = SubResource("StandardMaterial3D_sb0kl")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGTorus3D"]
+light_color = Color(0, 1, 1, 1)
+light_energy = 4.0
+light_volumetric_fog_energy = 0.0
