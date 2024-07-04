@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cy155kfqv65ld"]
+[gd_scene load_steps=12 format=3 uid="uid://cy155kfqv65ld"]
 
 [ext_resource type="Texture2D" uid="uid://dsfn7i5tdtnwc" path="res://Textures/Unsorted/461223182.jpg" id="1_ty52g"]
 [ext_resource type="Texture2D" uid="uid://btorh35lnjjub" path="res://Textures/Unsorted/461223101.jpg" id="2_4cqjw"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cirnp6cwvmhrb" path="res://Textures/Dev/Dark/texture_08.png" id="4_nw4t5"]
 [ext_resource type="PackedScene" uid="uid://35qwr26v10y7" path="res://Stages/Doodads/Chapel/chapel_light.tscn" id="5_jkxh6"]
 [ext_resource type="PackedScene" uid="uid://7a72ywj87vnj" path="res://Stages/Doodads/Chapel/Pew.tscn" id="6_sfxff"]
+[ext_resource type="PackedScene" uid="uid://ftegjul40k5" path="res://Stages/Doodads/Chapel/banner.tscn" id="7_np64i"]
 
 [sub_resource type="Environment" id="Environment_ltn51"]
 ssao_enabled = true
@@ -78,7 +79,9 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.3
 
 [node name="Chapel" type="Node" parent="."]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Chapel"]
+[node name="Geometry" type="Node" parent="Chapel"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2.5, -8)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -86,7 +89,7 @@ use_collision = true
 size = Vector3(1, 5, 4)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="Chapel"]
+[node name="CSGBox3D2" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.5, -8)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -94,7 +97,7 @@ use_collision = true
 size = Vector3(1, 5, 4)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="Chapel"]
+[node name="CSGBox3D5" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 5, -5.5)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -102,7 +105,7 @@ use_collision = true
 size = Vector3(14, 10, 1)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGBox3D12" type="CSGBox3D" parent="Chapel"]
+[node name="CSGBox3D12" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 1, 14)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -110,7 +113,7 @@ use_collision = true
 size = Vector3(1, 18, 40)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGBox3D15" type="CSGBox3D" parent="Chapel"]
+[node name="CSGBox3D15" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, 34.5)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -118,7 +121,7 @@ use_collision = true
 size = Vector3(36, 18, 1)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Chapel/CSGBox3D15"]
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Chapel/Geometry/CSGBox3D15"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 4, 0)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -126,7 +129,7 @@ operation = 2
 radius = 5.0
 sides = 6
 
-[node name="CSGBox3D13" type="CSGBox3D" parent="Chapel"]
+[node name="CSGBox3D13" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1, 14)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -134,7 +137,7 @@ use_collision = true
 size = Vector3(1, 18, 40)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="Chapel"]
+[node name="CSGBox3D6" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5, -5.5)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -142,7 +145,7 @@ use_collision = true
 size = Vector3(15, 10, 1)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGBox3D14" type="CSGBox3D" parent="Chapel"]
+[node name="CSGBox3D14" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, -5.5)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -150,7 +153,7 @@ use_collision = true
 size = Vector3(5, 5, 1)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="Chapel"]
+[node name="CSGBox3D3" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, -8)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -158,7 +161,7 @@ use_collision = true
 size = Vector3(7, 1, 4)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="Chapel"]
+[node name="CSGBox3D4" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -7.5)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -166,7 +169,7 @@ use_collision = true
 size = Vector3(5, 1, 5)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="Chapel"]
+[node name="CSGBox3D7" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, -2.5)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -174,7 +177,7 @@ use_collision = true
 size = Vector3(34, 1, 5)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="Chapel"]
+[node name="CSGBox3D9" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -3.5, 2.5)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -182,7 +185,7 @@ use_collision = true
 size = Vector3(34, 1, 5)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="Chapel"]
+[node name="CSGBox3D8" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -1, 0.5)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -190,7 +193,7 @@ use_collision = true
 size = Vector3(34, 4, 1)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="Chapel"]
+[node name="CSGBox3D10" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -7.5, 19.5)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -198,7 +201,7 @@ use_collision = true
 size = Vector3(34, 1, 29)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGBox3D11" type="CSGBox3D" parent="Chapel"]
+[node name="CSGBox3D11" type="CSGBox3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -5, 5.5)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -206,7 +209,7 @@ use_collision = true
 size = Vector3(34, 4, 1)
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Chapel"]
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Chapel/Geometry"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, -3, 5)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -215,7 +218,7 @@ polygon = PackedVector2Array(-1, 0, 4, 4, 4, 3, 0, 0)
 depth = 4.0
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Chapel"]
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Chapel/Geometry"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, -7, 10)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -224,7 +227,7 @@ polygon = PackedVector2Array(-1, 0, 4, 4, 4, 3, 0, 0)
 depth = 4.0
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGPolygon3D3" type="CSGPolygon3D" parent="Chapel"]
+[node name="CSGPolygon3D3" type="CSGPolygon3D" parent="Chapel/Geometry"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12, -7, 10)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -233,7 +236,7 @@ polygon = PackedVector2Array(-1, 0, 4, 4, 4, 3, 0, 0)
 depth = 4.0
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGPolygon3D4" type="CSGPolygon3D" parent="Chapel"]
+[node name="CSGPolygon3D4" type="CSGPolygon3D" parent="Chapel/Geometry"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12, -3, 5)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -242,7 +245,7 @@ polygon = PackedVector2Array(-1, 0, 4, 4, 4, 3, 0, 0)
 depth = 4.0
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGPolygon3D5" type="CSGPolygon3D" parent="Chapel"]
+[node name="CSGPolygon3D5" type="CSGPolygon3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 34)
 lod_bias = 128.0
 ignore_occlusion_culling = true
@@ -250,12 +253,12 @@ polygon = PackedVector2Array(-18, 0, -16, 3, -13, 2, -2, 6, -1, 5, 1, 5, 2, 6, 1
 depth = 40.0
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Chapel"]
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19, -5)
 height = 8.0
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGTorus3D" type="CSGTorus3D" parent="Chapel"]
+[node name="CSGTorus3D" type="CSGTorus3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 29, -5)
 inner_radius = 5.0
 outer_radius = 7.0
@@ -263,7 +266,7 @@ sides = 6
 smooth_faces = false
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="Chapel"]
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Chapel/Geometry"]
 transform = Transform3D(0.866025, -2.18557e-08, 0.5, -0.5, -3.78552e-08, 0.866025, 0, -1, -4.37114e-08, 0, 29, -5)
 radius = 3.0
 radial_segments = 6
@@ -271,31 +274,117 @@ rings = 3
 smooth_faces = false
 material = SubResource("StandardMaterial3D_sqni4")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Chapel"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Chapel/Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, -4)
 light_color = Color(0, 1, 1, 1)
 light_energy = 16.0
 light_volumetric_fog_energy = 16.0
 light_specular = 16.0
 
-[node name="CSGPolygon3D6" type="CSGPolygon3D" parent="Chapel"]
+[node name="CSGPolygon3D6" type="CSGPolygon3D" parent="Chapel/Geometry"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, -10)
 use_collision = true
 polygon = PackedVector2Array(-2, 0, 0, 1, 0, 0)
 depth = 4.0
 material = SubResource("StandardMaterial3D_wqmeg")
 
-[node name="Chapel Light" parent="Chapel" instance=ExtResource("5_jkxh6")]
+[node name="Doodads" type="Node" parent="Chapel"]
+
+[node name="Chapel Light" parent="Chapel/Doodads" instance=ExtResource("5_jkxh6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 10, 1)
 
-[node name="Chapel Light2" parent="Chapel" instance=ExtResource("5_jkxh6")]
+[node name="Chapel Light2" parent="Chapel/Doodads" instance=ExtResource("5_jkxh6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 10, 25)
 
-[node name="Chapel Light3" parent="Chapel" instance=ExtResource("5_jkxh6")]
+[node name="Chapel Light3" parent="Chapel/Doodads" instance=ExtResource("5_jkxh6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 10, 2)
 
-[node name="Chapel Light4" parent="Chapel" instance=ExtResource("5_jkxh6")]
+[node name="Chapel Light4" parent="Chapel/Doodads" instance=ExtResource("5_jkxh6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 10, 26)
+
+[node name="Pew" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -2.71569, 2.11924)
+
+[node name="Pew2" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2.71569, 2.11924)
+
+[node name="Pew3" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2.71569, 2.11924)
+
+[node name="Pew4" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2.71569, 2.11924)
+
+[node name="Pew5" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -2.71569, 5.11924)
+
+[node name="Pew6" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2.71569, 5.11924)
+
+[node name="Pew7" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2.71569, 5.11924)
+
+[node name="Pew8" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2.71569, 5.11924)
+
+[node name="Pew25" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -2.71569, 3.62023)
+
+[node name="Pew26" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2.71569, 3.62023)
+
+[node name="Pew27" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2.71569, 3.62023)
+
+[node name="Pew28" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2.71569, 3.62023)
+
+[node name="Pew17" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -6.71569, 8.69281)
+
+[node name="Pew18" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -6.71569, 8.69281)
+
+[node name="Pew19" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -6.71569, 8.69281)
+
+[node name="Pew20" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -6.71569, 8.69281)
+
+[node name="Pew21" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -6.71569, 11.6928)
+
+[node name="Pew22" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -6.71569, 11.6928)
+
+[node name="Pew23" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -6.71569, 11.6928)
+
+[node name="Pew24" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -6.71569, 11.6928)
+
+[node name="Pew9" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -6.71569, 7.11924)
+
+[node name="Pew10" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -6.71569, 7.11924)
+
+[node name="Pew11" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -6.71569, 7.11924)
+
+[node name="Pew12" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -6.71569, 7.11924)
+
+[node name="Pew13" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -6.71569, 10.1192)
+
+[node name="Pew14" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -6.71569, 10.1192)
+
+[node name="Pew15" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -6.71569, 10.1192)
+
+[node name="Pew16" parent="Chapel/Doodads" instance=ExtResource("6_sfxff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -6.71569, 10.1192)
 
 [node name="Outside" type="Node" parent="."]
 
@@ -320,5 +409,17 @@ use_collision = true
 size = Vector3(7, 0.25, 20)
 material = SubResource("StandardMaterial3D_5mgoe")
 
-[node name="Pew" parent="." instance=ExtResource("6_sfxff")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -2, 4)
+[node name="Banner" parent="." instance=ExtResource("7_np64i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -2, 1)
+
+[node name="Banner2" parent="." instance=ExtResource("7_np64i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -2, 1)
+
+[node name="Banner3" parent="." instance=ExtResource("7_np64i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 1)
+
+[node name="Banner4" parent="." instance=ExtResource("7_np64i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -6, 6)
+
+[node name="Banner5" parent="." instance=ExtResource("7_np64i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -6, 6)

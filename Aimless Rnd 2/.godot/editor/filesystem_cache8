@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1720114131
+::res://::1720120216
 BulletTimer.gd::GDScript::-1::1720111504::0::1::::<>Timer<>::
 bullet_ray.tscn::PackedScene::8017088909363861707::1720111504::0::1::::<><>::res://MGBullet.gd
 crosshair.gd::GDScript::-1::1720111504::0::1::::cross_hair<>Control<>::
 crosshair.tscn::PackedScene::6688318496416034386::1720111504::0::1::::<><>::res://crosshair.gd
-Debug.tscn::PackedScene::4512759216785664927::1720114131::0::1::::<><>::uid://diqcix80tn6ba::::res://Player.tscn<>uid://dt2ggbjsag7lm::::res://targetable_node.tscn<>uid://b6apxs0m53t2s::::res://DummyEnemy.tscn
+Debug.tscn::PackedScene::4512759216785664927::1720117791::0::1::::<><>::uid://diqcix80tn6ba::::res://Player.tscn<>uid://dt2ggbjsag7lm::::res://targetable_node.tscn<>uid://b6apxs0m53t2s::::res://DummyEnemy.tscn
 DummyEnemy.gd::GDScript::-1::1720111504::0::1::::<>CharacterBody3D<>::
 DummyEnemy.tscn::PackedScene::4563227649250266100::1720111504::0::1::::<><>::res://DummyEnemy.gd
 hand.tscn::PackedScene::2942619992343942687::1720111504::0::1::::<><>::
@@ -13,7 +13,7 @@ machine_gun.gd::GDScript::-1::1720111504::0::1::::<>MeshInstance3D<>::
 machine_gun.tscn::PackedScene::5697371524270939076::1720111504::0::1::::<><>::res://machine_gun.gd
 MGBullet.gd::GDScript::-1::1720111504::0::1::::<>RayCast3D<>::
 Player.gd::GDScript::-1::1720111504::0::1::::Player<>CharacterBody3D<>::
-Player.tscn::PackedScene::7753939824762712598::1720111504::0::1::::<><>::res://Player.gd<>res://Player/Player States/FiniteStateMachine.gd<>res://Player/Player Camera/Camera3D.gd<>uid://bh6oryxhdrptf::::res://hand.tscn<>res://Player/Player States/player_idle.gd<>res://Player/Player States/player_walking.gd<>uid://cnf342mhj32pk::::res://machine_gun.tscn<>res://Player/Player Camera/CameraUnlocked.gd<>uid://dmhsjvgbwujh0::::res://bullet_ray.tscn<>res://Player/Player States/player_air.gd<>uid://c2j4vmrajhjiw::::res://crosshair.tscn
+Player.tscn::PackedScene::7753939824762712598::1720117791::0::1::::<><>::res://Player.gd<>res://Player/Player States/FiniteStateMachine.gd<>res://Player/Player Camera/Camera3D.gd<>uid://bh6oryxhdrptf::::res://hand.tscn<>res://Player/Player States/player_idle.gd<>res://Player/Player States/player_walking.gd<>uid://cnf342mhj32pk::::res://machine_gun.tscn<>res://Player/Player Camera/CameraUnlocked.gd<>uid://dmhsjvgbwujh0::::res://bullet_ray.tscn<>res://Player/Player States/player_air.gd<>uid://c2j4vmrajhjiw::::res://crosshair.tscn
 TargetableNode.gd::GDScript::-1::1720111504::0::1::::Targetable<>Node3D<>::
 targetable_node.tscn::PackedScene::8548963363526261298::1720111504::0::1::::<><>::res://TargetableNode.gd
 ::res://Materials/::1720112086
@@ -33,8 +33,12 @@ player_air.gd::GDScript::-1::1720111504::0::1::::Air<>PlayerState<>::
 player_idle.gd::GDScript::-1::1720111504::0::1::::Idle<>PlayerState<>::
 player_walking.gd::GDScript::-1::1720111504::0::1::::Walking<>PlayerState<>::
 State.gd::GDScript::-1::1720111504::0::1::::State<>Node<>::
-::res://Stages/::1720114131
-chapel.tscn::PackedScene::6512923053618481145::1720114454::0::1::::<><>::uid://dsfn7i5tdtnwc::::res://Textures/Unsorted/461223182.jpg<>uid://btorh35lnjjub::::res://Textures/Unsorted/461223101.jpg<>uid://diqcix80tn6ba::::res://Player.tscn<>uid://cirnp6cwvmhrb::::res://Textures/Dev/Dark/texture_08.png
+::res://Stages/::1720117809
+chapel.tscn::PackedScene::6512923053618481145::1720117809::0::1::::<><>::uid://dsfn7i5tdtnwc::::res://Textures/Unsorted/461223182.jpg<>uid://btorh35lnjjub::::res://Textures/Unsorted/461223101.jpg<>uid://diqcix80tn6ba::::res://Player.tscn<>uid://cirnp6cwvmhrb::::res://Textures/Dev/Dark/texture_08.png<>uid://35qwr26v10y7::::res://Stages/Doodads/Chapel/chapel_light.tscn<>uid://7a72ywj87vnj::::res://Stages/Doodads/Chapel/Pew.tscn
+::res://Stages/Doodads/::1720115324
+::res://Stages/Doodads/Chapel/::1720117791
+chapel_light.tscn::PackedScene::2028230649881155700::1720117791::0::1::::<><>::
+Pew.tscn::PackedScene::2248035451621396295::1720117791::0::1::::<><>::uid://d3feyy4dvuoqi::::res://Textures/Wood/wood1.png<>uid://dfgxs3bvofmo::::res://Textures/Unsorted/weave-blue-hair.png<>uid://bjvdmsry1qbhk::::res://Textures/Unsorted/461223108.jpg<>uid://c4tn4jhymlli4::::res://Textures/Unsorted/461223113.jpg
 ::res://Textures/::1720112078
 ::res://Textures/Bricks/::1720112042
 ::res://Textures/Bricks/BrickWall (1)/::1720112059
@@ -186,7 +190,7 @@ texture_10.png::CompressedTexture2D::2676429116011110470::1586304822::1720112057
 texture_11.png::CompressedTexture2D::4267521916398688364::1586304824::1720112057::1::::<><>::
 texture_12.png::CompressedTexture2D::3497601815657977083::1586304826::1720112057::1::::<><>::
 texture_13.png::CompressedTexture2D::598839975816369728::1586304827::1720112057::1::::<><>::
-::res://Textures/Dev/Light/::1720112057
+::res://Textures/Dev/Light/::1720114803
 texture_01.png::CompressedTexture2D::807820917739203732::1586304828::1720112057::1::::<><>::
 texture_02.png::CompressedTexture2D::415430740589882602::1586304829::1720112057::1::::<><>::
 texture_03.png::CompressedTexture2D::8092911445613997527::1586304830::1720112057::1::::<><>::

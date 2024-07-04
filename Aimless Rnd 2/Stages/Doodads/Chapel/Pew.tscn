@@ -34,7 +34,7 @@ uv1_world_triplanar = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_nb4vp"]
 size = Vector3(2.2, 0.6, 0.5)
 
-[node name="Pew" type="RigidBody3D" groups=["Target"]]
+[node name="Pew" type="RigidBody3D"]
 mass = 8.0
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
