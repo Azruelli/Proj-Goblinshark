@@ -1,6 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://lyemo55glsx"]
-
-[ext_resource type="Script" path="res://Example World/Scripts/physic_objects/targetable_objects.gd" id="1_6oxr2"]
+[gd_scene load_steps=3 format=3 uid="uid://lyemo55glsx"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ni6x2"]
 
@@ -11,7 +9,6 @@ albedo_color = Color(0, 1, 1, 1)
 [node name="Plasma Sphere" type="RigidBody3D" groups=["Target"]]
 collision_layer = 4
 collision_mask = 23
-script = ExtResource("1_6oxr2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)

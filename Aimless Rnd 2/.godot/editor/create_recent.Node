@@ -1,11 +1,11 @@
-CollisionShape3D
-Area3D
-CSGCylinder3D
-RigidBody3D
+CSGPolygon3D
 CSGTorus3D
 CSGBox3D
+CollisionShape3D
+CSGCylinder3D
+Area3D
+RigidBody3D
 CSGSphere3D
-CSGPolygon3D
 Node
 DirectionalLight3D
 OmniLight3D

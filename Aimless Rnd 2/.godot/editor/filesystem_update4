@@ -11,4 +11,15 @@ res://Stages/Doodads/Chapel/plasma_chandelier.tscn
 res://Stages/Doodads/Chapel/altar.tscn
 res://Stages/Doodads/Chapel/plasma_lamp.tscn
 res://Stages/Doodads/Chapel/fester_1.tscn
-res://Stages/Area3D.gd
+res://Stages/Doodads/Chapel/rug_2.tscn
+res://Stages/Doodads/Chapel/rug_1.tscn
+res://Stages/Doodads/Chapel/plasma_sphere.tscn
+res://Stages/Doodads/Chapel/PewBroken.tscn
+res://Stages/Doodads/Chapel/PewBroken2.tscn
+res://Stages/Doodads/Chapel/PewBroken3.tscn
+res://Materials/Flesh_Root.tres
+res://Stages/Doodads/Chapel/Pew/Pew.tscn
+res://Stages/Doodads/Chapel/Pew/PewBroken.tscn
+res://Stages/Doodads/Chapel/Pew/PewBroken2.tscn
+res://Stages/Doodads/Chapel/Pew/PewBroken3.tscn
+res://Materials/Flesh_Root_Thick.tres

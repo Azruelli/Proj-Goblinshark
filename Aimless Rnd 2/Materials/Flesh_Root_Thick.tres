@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://0mk0l2wkpa53"]
+
+[ext_resource type="Texture2D" uid="uid://c4ej1ovlywdy2" path="res://Textures/Wood/vegetation_tree_bark_65.png" id="1_xrnkl"]
+[ext_resource type="Texture2D" uid="uid://crctx8s0poj36" path="res://Textures/Noise/Grainy/Grainy 11 - 512x512.png" id="2_aptb1"]
+[ext_resource type="Texture2D" uid="uid://5oojaao3u1y6" path="res://Textures/Noise/Grainy/Grainy 4 - 512x512.png" id="3_w70ak"]
+
+[resource]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.860465, 0.543276, 0.581585, 1)
+albedo_texture = ExtResource("1_xrnkl")
+detail_enabled = true
+detail_mask = ExtResource("3_w70ak")
+detail_blend_mode = 3
+detail_uv_layer = 1
+detail_albedo = ExtResource("2_aptb1")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_triplanar = true
+uv2_world_triplanar = true

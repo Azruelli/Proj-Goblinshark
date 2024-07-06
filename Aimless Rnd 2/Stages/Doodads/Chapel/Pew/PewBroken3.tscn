@@ -1,0 +1,101 @@
+[gd_scene load_steps=10 format=3 uid="uid://vn5ofqd1gryq"]
+
+[ext_resource type="Texture2D" uid="uid://d3feyy4dvuoqi" path="res://Textures/Wood/wood1.png" id="1_4wls4"]
+[ext_resource type="Texture2D" uid="uid://dfgxs3bvofmo" path="res://Textures/Unsorted/weave-blue-hair.png" id="2_82788"]
+[ext_resource type="Texture2D" uid="uid://bjvdmsry1qbhk" path="res://Textures/Unsorted/461223108.jpg" id="3_cy6g3"]
+[ext_resource type="Texture2D" uid="uid://c4tn4jhymlli4" path="res://Textures/Unsorted/461223113.jpg" id="4_4cemd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cqwn0"]
+albedo_texture = ExtResource("1_4wls4")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_78f0x"]
+albedo_texture = ExtResource("2_82788")
+rim_tint = 0.0
+rim_texture = ExtResource("3_cy6g3")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cbjn6"]
+albedo_texture = ExtResource("2_82788")
+rim_tint = 0.0
+rim_texture = ExtResource("3_cy6g3")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75kkd"]
+albedo_color = Color(0.811765, 1, 1, 1)
+metallic = 1.0
+metallic_texture = ExtResource("4_4cemd")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nb4vp"]
+size = Vector3(2.2, 0.6, 0.5)
+
+[node name="Pew" type="RigidBody3D"]
+mass = 8.0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.984808, 0.173648, 1.6471e-09, 0.0151344, -0.0858317, 0.996195, 0.172987, -0.98106, -0.0871558, -0.0067963, -0.106732, -0.712444)
+size = Vector3(2, 0.5, 0.1)
+material = SubResource("StandardMaterial3D_cqwn0")
+
+[node name="CSGPolygon3D3" type="CSGPolygon3D" parent="CSGBox3D"]
+transform = Transform3D(0.25, 0, -4.88944e-09, 1.86265e-08, 0.25, -1.86265e-09, -4.19095e-09, 0, 0.25, -1.08943, -0.25806, 0.109458)
+operation = 2
+polygon = PackedVector2Array(0, 0, 0.6, 1, 0.6, 1, 1, 0)
+material = SubResource("StandardMaterial3D_78f0x")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(0.954636, -0.297775, 0, 0.294271, 0.943404, -0.152951, 0.0455451, 0.146013, 0.988234, -0.152565, 0.0754805, -0.1)
+size = Vector3(2, 0.1, 0.6)
+material = SubResource("StandardMaterial3D_cqwn0")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(0.984808, 0.173648, 1.6471e-09, 0.0151344, -0.0858317, 0.996195, 0.172987, -0.98106, -0.0871558, 0.00679645, -0.114991, -0.989103)
+size = Vector3(1.8, 0.4, 0.2)
+material = SubResource("StandardMaterial3D_cbjn6")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSGBox3D4"]
+transform = Transform3D(0.25, 0, -2.79397e-09, 1.86265e-08, 0.25, -1.86265e-09, -2.09548e-09, 0, 0.25, -0.343117, -0.219429, 0.109739)
+operation = 2
+polygon = PackedVector2Array(0, 0, 0.6, 1, 0.6, 1, 1, 0)
+depth = 0.5
+material = SubResource("StandardMaterial3D_78f0x")
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="CSGBox3D4"]
+transform = Transform3D(0.25, 0, -2.32831e-09, 1.86265e-08, 0.25, -1.86265e-09, -1.62981e-09, 0, 0.25, -0.493118, -0.269429, 0.108484)
+operation = 2
+polygon = PackedVector2Array(0, 0, 0.6, 1, 0.6, 1, 1, 0)
+depth = 0.3
+material = SubResource("StandardMaterial3D_78f0x")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(0.216506, 0.125, 0, -0.125, 0.216506, 0, 0, 0, 0.25, -1.03387, -0.0114647, -0.0749999)
+size = Vector3(0.3, 2.4, 2.6)
+material = SubResource("StandardMaterial3D_cqwn0")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(0.234781, -0.0858944, 0, 0.0858944, 0.234781, 0, 0, 0, 0.25, 0.647688, -0.00644209, -0.0749999)
+size = Vector3(0.3, 2.4, 2.6)
+material = SubResource("StandardMaterial3D_cqwn0")
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="."]
+transform = Transform3D(0.0858944, 0.234781, 0, -0.234781, 0.0858944, 0, 0, 0, 0.25, 0.682905, 0.00644209, -0.075)
+outer_radius = 0.75
+sides = 6
+ring_sides = 3
+material = SubResource("StandardMaterial3D_75kkd")
+
+[node name="CSGTorus3D2" type="CSGTorus3D" parent="."]
+transform = Transform3D(-0.125, 0.216506, 0, -0.216506, -0.125, 0, 0, 0, 0.25, -1.08029, -0.0135352, -0.075)
+outer_radius = 0.75
+sides = 6
+ring_sides = 3
+material = SubResource("StandardMaterial3D_75kkd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19209e-07, 0, -0.05)
+shape = SubResource("BoxShape3D_nb4vp")
