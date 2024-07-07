@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://lyttuyfntbf1"]
+
+[ext_resource type="Texture2D" uid="uid://dqiu6qfkqe6ku" path="res://Textures/Unsorted/461223126.jpg" id="1_oyt44"]
+[ext_resource type="Texture2D" uid="uid://5oojaao3u1y6" path="res://Textures/Noise/Grainy/Grainy 4 - 512x512.png" id="2_m0xxs"]
+
+[resource]
+albedo_texture = ExtResource("1_oyt44")
+detail_enabled = true
+detail_blend_mode = 3
+detail_uv_layer = 1
+detail_albedo = ExtResource("2_m0xxs")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_scale = Vector3(0.2, 0.2, 0.2)
+uv2_triplanar = true
+uv2_world_triplanar = true

@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://vcnse5fodayp"]
+[gd_scene load_steps=8 format=3 uid="uid://vcnse5fodayp"]
 
 [ext_resource type="Texture2D" uid="uid://b7r0lnrniuc3j" path="res://Textures/Dirt/Dirt_04.png" id="1_gw76p"]
 [ext_resource type="Texture2D" uid="uid://1s0lkuex727y" path="res://Textures/Noise/Vein/Vein 2 - 512x512.png" id="2_xm5vx"]
 [ext_resource type="Texture2D" uid="uid://eksbitd0y6xq" path="res://Textures/Unsorted/concrete.png" id="3_nhd1x"]
 [ext_resource type="Texture2D" uid="uid://c3eoq6j7bwatp" path="res://Textures/Noise/Marble/Marble 9 - 512x512.png" id="4_a7q1l"]
-[ext_resource type="Texture2D" uid="uid://dqiu6qfkqe6ku" path="res://Textures/Unsorted/461223126.jpg" id="5_87fmi"]
-[ext_resource type="Texture2D" uid="uid://5oojaao3u1y6" path="res://Textures/Noise/Grainy/Grainy 4 - 512x512.png" id="6_1j45h"]
+[ext_resource type="Material" uid="uid://lyttuyfntbf1" path="res://Materials/Quartz.tres" id="5_xldbk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kkv0u"]
 albedo_texture = ExtResource("1_gw76p")
@@ -29,18 +28,6 @@ uv2_scale = Vector3(0.2, 0.2, 0.2)
 uv2_triplanar = true
 uv2_world_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kgvjc"]
-albedo_texture = ExtResource("5_87fmi")
-detail_enabled = true
-detail_blend_mode = 3
-detail_uv_layer = 1
-detail_albedo = ExtResource("6_1j45h")
-uv1_triplanar = true
-uv1_world_triplanar = true
-uv2_scale = Vector3(0.2, 0.2, 0.2)
-uv2_triplanar = true
-uv2_world_triplanar = true
-
 [node name="Cliff1" type="CSGPolygon3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16576, -2.72748, -0.614433)
 use_collision = true
@@ -58,4 +45,4 @@ material = SubResource("StandardMaterial3D_xnmls")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, -0.5, -1.25)
 polygon = PackedVector2Array(-16.4121, -3.3624, -3.79867, 1.31566, -19.8416, 5.21799, -2.25, 4.5, -0.5, 5.25, -4.02791, 8.12257, -1.48499, 19.3624, 4.31616, 7.13473, 3.95723, 5.89297, 2.62745, 5.9674, 2.89514, 5.15339, 2.3684, 4.69939, 3.17917, 3.84333, 2.81341, 2.80081, 2.91355, 2.0934, 4.37152, 3.64682, 12.4632, 1.98792, 21.8051, -1.17505, 13.1028, -23.8334, -5.02991, -6.13983)
 depth = 3.0
-material = SubResource("StandardMaterial3D_kgvjc")
+material = ExtResource("5_xldbk")

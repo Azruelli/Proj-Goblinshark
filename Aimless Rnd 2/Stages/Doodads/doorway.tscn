@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://ksdv5eohhje0"]
+
+[ext_resource type="Texture2D" uid="uid://cq62vpdu7uj18" path="res://Textures/Dev/Dark/texture_09.png" id="1_tofjx"]
+[ext_resource type="Texture2D" uid="uid://dwpax80gw55cp" path="res://Textures/Dev/Red/texture_10.png" id="2_ve5bf"]
+[ext_resource type="Texture2D" uid="uid://wuppvaym065s" path="res://Textures/Dev/Orange/texture_10.png" id="3_72ru6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r0u34"]
+albedo_texture = ExtResource("1_tofjx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wdj4"]
+albedo_texture = ExtResource("2_ve5bf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xoiip"]
+albedo_texture = ExtResource("3_72ru6")
+
+[node name="Doorway" type="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.75, -0.375)
+size = Vector3(1.25, 2.5, 0.25)
+material = SubResource("StandardMaterial3D_r0u34")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00610352, -0.00012207, 0)
+operation = 2
+size = Vector3(1.14111, 2.33667, 1)
+material = SubResource("StandardMaterial3D_r0u34")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00610352, -0.00012207, 0.00952148)
+size = Vector3(1.14111, 2.33667, 0.019043)
+material = SubResource("StandardMaterial3D_4wdj4")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0123433)
+size = Vector3(1, 2.5, 0.113586)
+material = SubResource("StandardMaterial3D_xoiip")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-3.84303e-08, -1, 2.08278e-08, 0.879183, -4.37114e-08, -0.476484, 0.476484, 0, 0.879183, 1.49012e-08, -0.193918, -0.218922)
+radius = 0.0965799
+height = 0.758104
+sides = 3

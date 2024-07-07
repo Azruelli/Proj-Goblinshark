@@ -1,14 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://ftegjul40k5"]
+[gd_scene load_steps=8 format=3 uid="uid://kwwd3oe6uxqn"]
 
-[ext_resource type="Texture2D" uid="uid://dfgxs3bvofmo" path="res://Textures/Unsorted/weave-blue-hair.png" id="1_untuh"]
-[ext_resource type="Texture2D" uid="uid://bjvdmsry1qbhk" path="res://Textures/Unsorted/461223108.jpg" id="2_u2x0l"]
-[ext_resource type="Texture2D" uid="uid://c4tn4jhymlli4" path="res://Textures/Unsorted/461223113.jpg" id="3_n5s1w"]
-[ext_resource type="Texture2D" uid="uid://d3feyy4dvuoqi" path="res://Textures/Wood/wood1.png" id="4_l647l"]
+[ext_resource type="Texture2D" uid="uid://dfgxs3bvofmo" path="res://Textures/Unsorted/weave-blue-hair.png" id="1_83b1e"]
+[ext_resource type="Texture2D" uid="uid://bjvdmsry1qbhk" path="res://Textures/Unsorted/461223108.jpg" id="2_d7m5e"]
+[ext_resource type="Texture2D" uid="uid://c4tn4jhymlli4" path="res://Textures/Unsorted/461223113.jpg" id="3_j11do"]
+[ext_resource type="Texture2D" uid="uid://d3feyy4dvuoqi" path="res://Textures/Wood/wood1.png" id="4_rqcr8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_klm7s"]
-albedo_texture = ExtResource("1_untuh")
+albedo_texture = ExtResource("1_83b1e")
 rim_tint = 0.0
-rim_texture = ExtResource("2_u2x0l")
+rim_texture = ExtResource("2_d7m5e")
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -16,12 +16,12 @@ uv1_world_triplanar = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1eywp"]
 albedo_color = Color(0.811765, 1, 1, 1)
 metallic = 1.0
-metallic_texture = ExtResource("3_n5s1w")
+metallic_texture = ExtResource("3_j11do")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y65yh"]
-albedo_texture = ExtResource("4_l647l")
+albedo_texture = ExtResource("4_rqcr8")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
@@ -65,8 +65,8 @@ sides = 6
 material = SubResource("StandardMaterial3D_y65yh")
 
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
-transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0.8, -2.26108, 0)
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0.8, -9.4677, 0)
 radius = 0.1
-height = 8.85378
+height = 23.3812
 sides = 6
 material = SubResource("StandardMaterial3D_y65yh")

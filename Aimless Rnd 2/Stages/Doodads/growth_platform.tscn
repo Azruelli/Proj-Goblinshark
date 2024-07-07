@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfvnjgf1udgkd"]
+
+[ext_resource type="Texture2D" uid="uid://dsfn7i5tdtnwc" path="res://Textures/Unsorted/461223182.jpg" id="1_1qvem"]
+[ext_resource type="Texture2D" uid="uid://btorh35lnjjub" path="res://Textures/Unsorted/461223101.jpg" id="2_ylllg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eonjm"]
+albedo_texture = ExtResource("1_1qvem")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_ylllg")
+detail_enabled = true
+detail_mask = ExtResource("2_ylllg")
+detail_blend_mode = 2
+detail_uv_layer = 1
+detail_albedo = ExtResource("2_ylllg")
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_triplanar = true
+uv2_world_triplanar = true
+
+[node name="GrowthPlatform" type="CSGSphere3D"]
+transform = Transform3D(2.37591, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+use_collision = true
+radius = 5.56309
+radial_segments = 6
+rings = 4
+material = SubResource("StandardMaterial3D_eonjm")
