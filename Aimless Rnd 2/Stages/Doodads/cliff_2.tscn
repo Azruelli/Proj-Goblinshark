@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=3 uid="uid://vcnse5fodayp"]
+
+[ext_resource type="Texture2D" uid="uid://b7r0lnrniuc3j" path="res://Textures/Dirt/Dirt_04.png" id="1_gw76p"]
+[ext_resource type="Texture2D" uid="uid://1s0lkuex727y" path="res://Textures/Noise/Vein/Vein 2 - 512x512.png" id="2_xm5vx"]
+[ext_resource type="Texture2D" uid="uid://eksbitd0y6xq" path="res://Textures/Unsorted/concrete.png" id="3_nhd1x"]
+[ext_resource type="Texture2D" uid="uid://c3eoq6j7bwatp" path="res://Textures/Noise/Marble/Marble 9 - 512x512.png" id="4_a7q1l"]
+[ext_resource type="Texture2D" uid="uid://dqiu6qfkqe6ku" path="res://Textures/Unsorted/461223126.jpg" id="5_87fmi"]
+[ext_resource type="Texture2D" uid="uid://5oojaao3u1y6" path="res://Textures/Noise/Grainy/Grainy 4 - 512x512.png" id="6_1j45h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kkv0u"]
+albedo_texture = ExtResource("1_gw76p")
+detail_enabled = true
+detail_blend_mode = 3
+detail_albedo = ExtResource("2_xm5vx")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_triplanar = true
+uv2_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xnmls"]
+albedo_texture = ExtResource("3_nhd1x")
+detail_enabled = true
+detail_blend_mode = 3
+detail_uv_layer = 1
+detail_albedo = ExtResource("4_a7q1l")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_scale = Vector3(0.2, 0.2, 0.2)
+uv2_triplanar = true
+uv2_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kgvjc"]
+albedo_texture = ExtResource("5_87fmi")
+detail_enabled = true
+detail_blend_mode = 3
+detail_uv_layer = 1
+detail_albedo = ExtResource("6_1j45h")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_scale = Vector3(0.2, 0.2, 0.2)
+uv2_triplanar = true
+uv2_world_triplanar = true
+
+[node name="Cliff1" type="CSGPolygon3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16576, -2.72748, -0.614433)
+use_collision = true
+polygon = PackedVector2Array(-4.2928, -0.457751, -3.02805, 0.525857, -2.88401, 1.39532, -2.74249, 1.95367, -0.5, 3.5, 1, 2.5, 1.6757, 1.79129, 2.51697, 1.41773, 3.63814, 1.12212, 4.39421, 0.152001, 6.75198, -2.89763, 4.94042, -4.00334, 4.21287, -3.37375, 3.19206, -3.74827, 2.07441, -7.18506, 1.59076, -8.85771, 1.89142, -10.9386, -2.75693, -10.5672, -2.88513, -8.45391, -2.91778, -5.74838, -5.54945, -4.21355, -3.57333, -1.65287, -1.59168, -1.86526, -3.16978, -1.18934)
+depth = 18.0
+material = SubResource("StandardMaterial3D_kkv0u")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0, -1.25)
+polygon = PackedVector2Array(-4.25, -1, -2.69552, 1.82619, -2, 2.5, -2, 3, -2.13021, 3.28481, -1.69813, 3.874, -1.31916, 4.442, -1.34524, 5.081, -1.05588, 5.39684, -1.10197, 5.62511, -1, 6.25, -0.784701, 6.17374, -0.679736, 6.37933, -0.669273, 6.93384, -0.5, 7.25, -0.0643323, 7.07615, 0.638606, 7.17232, 1.18307, 6.76699, 1.49142, 6.1316, 2.00307, 6.41867, 2.75, 5.75, 3.51588, 5.81895, 4.53547, 5.21319, 4.36584, 1.47235, 5.87234, 1.06792, 6.07744, 0.396783, 6.22174, 0.336091, 6.21878, 0.206821, 6.54539, -0.725875, 4.09432, -13.0062, 1.53167, -14.8319, -2.58651, -12.5401, -2.08189, -3.72702)
+depth = 15.54
+material = SubResource("StandardMaterial3D_xnmls")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSGPolygon3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, -0.5, -1.25)
+polygon = PackedVector2Array(-16.4121, -3.3624, -3.79867, 1.31566, -19.8416, 5.21799, -2.25, 4.5, -0.5, 5.25, -4.02791, 8.12257, -1.48499, 19.3624, 4.31616, 7.13473, 3.95723, 5.89297, 2.62745, 5.9674, 2.89514, 5.15339, 2.3684, 4.69939, 3.17917, 3.84333, 2.81341, 2.80081, 2.91355, 2.0934, 4.37152, 3.64682, 12.4632, 1.98792, 21.8051, -1.17505, 13.1028, -23.8334, -5.02991, -6.13983)
+depth = 3.0
+material = SubResource("StandardMaterial3D_kgvjc")

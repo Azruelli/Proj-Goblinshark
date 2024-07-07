@@ -1,0 +1,75 @@
+[gd_scene load_steps=13 format=3 uid="uid://dpqby3t63uk1"]
+
+[ext_resource type="Texture2D" uid="uid://bujblus3pqx3p" path="res://Textures/Wood/vegetation_tree_bark_67.png" id="1_88kdv"]
+[ext_resource type="Texture2D" uid="uid://cxh6wluhk10s" path="res://Textures/Roof/RoofTexture (93)/RoofTexture (93)_BaseColor.png" id="2_3jxcx"]
+[ext_resource type="Texture2D" uid="uid://emqyh2tg7c52" path="res://Textures/Unsorted/461223124.jpg" id="3_34cc6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_51ytb"]
+albedo_texture = ExtResource("1_88kdv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ow4ic"]
+albedo_texture = ExtResource("2_3jxcx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u15uc"]
+albedo_texture = ExtResource("3_34cc6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t3ykn"]
+albedo_texture = ExtResource("1_88kdv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eewjp"]
+albedo_texture = ExtResource("1_88kdv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5bpbc"]
+albedo_texture = ExtResource("2_3jxcx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eahsk"]
+albedo_texture = ExtResource("2_3jxcx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_albbt"]
+albedo_texture = ExtResource("3_34cc6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_adaga"]
+albedo_texture = ExtResource("2_3jxcx")
+
+[node name="Plant1" type="CSGCylinder3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1665, 0)
+radius = 1.7471
+height = 7.95179
+material = SubResource("StandardMaterial3D_51ytb")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(4.45596, 0, 0, 0, 3.84735, 0, 0, 0, 4.93916, 0, 4.10101, 0)
+material = SubResource("StandardMaterial3D_ow4ic")
+
+[node name="CSGSphere3D5" type="CSGSphere3D" parent="CSGSphere3D"]
+transform = Transform3D(1.11212, 0, 0, 0, 1.12456, 0, 0, 0, 0.472124, -0.220266, -0.635537, 0.341185)
+operation = 2
+material = SubResource("StandardMaterial3D_u15uc")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-0.444022, 1.22643, 0.185484, -2.25819, -0.24115, -0.0364713, 0, -0.135939, 1.73813, 2.02391, -1.14266, -1.2507)
+height = 4.861
+material = SubResource("StandardMaterial3D_t3ykn")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(2.12755, 0.474644, -0.0938416, -0.842749, 1.05572, -0.701198, -0.244725, 0.490856, 1.59886, 5.95203, 0.979377, -0.201543)
+radius = 0.26989
+height = 3.15771
+material = SubResource("StandardMaterial3D_eewjp")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="."]
+transform = Transform3D(2.40688, 0, 0, 0, 3.31826, 0, 0, 0, 2.4413, 4.78413, -1.35179, -1.47791)
+material = SubResource("StandardMaterial3D_5bpbc")
+
+[node name="CSGSphere3D3" type="CSGSphere3D" parent="."]
+transform = Transform3D(1.42638, -1.10453, 0, 0.392088, 4.0182, 0, 0, 0, 1.44553, 6.45838, 3.02893, 0.446701)
+material = SubResource("StandardMaterial3D_eahsk")
+
+[node name="CSGSphere3D4" type="CSGSphere3D" parent="."]
+transform = Transform3D(4.95555, 0, 0, 0, 4.32655, 0, 0, 0, 2.3319, -0.981498, 1.65588, 1.68517)
+operation = 2
+material = SubResource("StandardMaterial3D_albbt")
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="."]
+transform = Transform3D(3.02811, 0, 0, 0, 4.98663, 0, 0, 0, 3.10596, 0, -3.83313, 0)
+material = SubResource("StandardMaterial3D_adaga")

@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://ds4ylv567ibs8"]
+
+[ext_resource type="Texture2D" uid="uid://blje5vfoljj5m" path="res://Textures/Unsorted/461223184.jpg" id="1_dhr82"]
+[ext_resource type="Texture2D" uid="uid://boauxe4av2x81" path="res://Textures/Noise/Swirl/Swirl 11 - 512x512.png" id="2_dsbgw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aumbf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a04b4"]
+transparency = 4
+albedo_color = Color(0, 0.870588, 0.858824, 1)
+albedo_texture = ExtResource("1_dhr82")
+emission_enabled = true
+emission = Color(0, 1, 1, 1)
+emission_energy_multiplier = 0.05
+detail_enabled = true
+detail_blend_mode = 1
+detail_albedo = ExtResource("2_dsbgw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68d87"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6hkwe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhp7n"]
+transparency = 1
+blend_mode = 2
+
+[node name="CSGCylinder3D" type="CSGCylinder3D"]
+material = SubResource("StandardMaterial3D_aumbf")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23939, 0)
+radius = 0.152175
+material = SubResource("StandardMaterial3D_a04b4")
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.865088, 0)
+inner_radius = 0.25
+material = SubResource("StandardMaterial3D_68d87")
+
+[node name="q" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.226005, 0, 0, 0, 1, 0, 0.794846, 0)
+operation = 2
+radius = 0.29543
+material = SubResource("StandardMaterial3D_6hkwe")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22727, 0)
+light_color = Color(0, 1, 1, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44948, 0)
+light_color = Color(0, 1, 0.580392, 1)
+
+[node name="CSGTorus3D2" type="CSGTorus3D" parent="."]
+transform = Transform3D(-0.137253, -0.706986, 0, 1.54949, -0.0626242, 0, 0, 0, 1.63607, 0, 1.22408, 0)
+outer_radius = 0.820426
+sides = 3
+material = SubResource("StandardMaterial3D_bhp7n")
