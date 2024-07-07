@@ -63,10 +63,3 @@ radius = 0.1
 height = 1.6
 sides = 6
 material = SubResource("StandardMaterial3D_y65yh")
-
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
-transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0.8, -2.26108, 0)
-radius = 0.1
-height = 8.85378
-sides = 6
-material = SubResource("StandardMaterial3D_y65yh")

@@ -1,12 +1,12 @@
-CSGBox3D
+SpotLight3D
 CSGPolygon3D
+CSGMesh3D
 CSGCylinder3D
+CSGSphere3D
+CSGBox3D
 CSGTorus3D
 Node
-CSGSphere3D
 OmniLight3D
-SpotLight3D
-CSGMesh3D
 CollisionShape3D
 RigidBody3D
 Area3D

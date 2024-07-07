@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dc4pgqveyex5a"]
+
+[ext_resource type="Material" uid="uid://b1rricd6so7yb" path="res://Materials/WorkedWood.tres" id="1_tpyhq"]
+[ext_resource type="Texture2D" uid="uid://dfgxs3bvofmo" path="res://Textures/Unsorted/weave-blue-hair.png" id="2_raa2q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_86ojo"]
+size = Vector3(4, 0.866211, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igjiy"]
+albedo_texture = ExtResource("2_raa2q")
+
+[node name="Altar" type="RigidBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.316895, 0)
+shape = SubResource("BoxShape3D_86ojo")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+size = Vector3(4.25, 0.75, 1)
+material = ExtResource("1_tpyhq")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
+size = Vector3(3.5, 0.75, 1.5)
+material = SubResource("StandardMaterial3D_igjiy")
