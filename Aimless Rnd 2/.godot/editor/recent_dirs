@@ -1,6 +1,7 @@
 res://Materials
-res://Textures/Unsorted
 res://Textures/Noise/Marble
+res://Textures/Noise/Milky
+res://Textures/Unsorted
 res://Textures/Noise/Gabor
 res://Textures/Noise/Grainy
 res://Textures/Noise/Craters
@@ -19,4 +20,3 @@ res://Stages/Doodads/Chapel
 res://Textures/Noise/Vein
 res://Textures/Vegetation
 res://Textures/Noise/Melt
-res://Textures/Noise/Super Noise
