@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dq8f11h6l01nn"]
+
+[ext_resource type="Texture2D" uid="uid://dsfn7i5tdtnwc" path="res://Textures/Unsorted/461223182.jpg" id="1_hi1jt"]
+[ext_resource type="Texture2D" uid="uid://btorh35lnjjub" path="res://Textures/Unsorted/461223101.jpg" id="2_gow7j"]
+
+[resource]
+albedo_texture = ExtResource("1_hi1jt")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_gow7j")
+detail_enabled = true
+detail_mask = ExtResource("2_gow7j")
+detail_uv_layer = 1
+detail_albedo = ExtResource("2_gow7j")
+uv1_scale = Vector3(0.05, 0.05, 0.05)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_triplanar = true
+uv2_world_triplanar = true

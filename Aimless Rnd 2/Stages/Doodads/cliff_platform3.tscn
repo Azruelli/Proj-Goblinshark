@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhljqigkfisrb"]
+
+[ext_resource type="Material" uid="uid://ctkdy36vlfql3" path="res://Materials/light_stone.tres" id="1_a4fpy"]
+
+[node name="Cliff1" type="CSGPolygon3D"]
+polygon = PackedVector2Array(-4.23294, 2.77626, -2.37763, 2.54508, -0.437828, 3.25135, 0.750643, 3.24234, 0.814173, 1.88594, 1.92675, 0.946508, 4.79072, 0.955707, 5.02127, -0.130705, 4.86672, -1.56205, 4.08402, -1.54934, 3.76231, -1.81515, -3.01054, -1.82858, -3.3158, -1.4822, -4.09739, -1.47889, -4.58245, 0.613704)
+depth = 5.0
+material = ExtResource("1_a4fpy")

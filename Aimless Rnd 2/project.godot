@@ -15,10 +15,6 @@ run/main_scene="res://Debug.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/csgtomesh/plugin.cfg", "res://addons/proto_shape/plugin.cfg")
-
 [input]
 
 Forward={

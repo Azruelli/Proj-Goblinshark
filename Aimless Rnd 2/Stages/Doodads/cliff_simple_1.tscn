@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dox6mfyyq744s"]
+
+[ext_resource type="Material" uid="uid://lyttuyfntbf1" path="res://Materials/Quartz.tres" id="1_4uo4d"]
+
+[node name="CSGPolygon3D" type="CSGPolygon3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0, -1.25)
+use_collision = true
+polygon = PackedVector2Array(-7.5711, -9.78492, 0.844404, 1.29545, 1.38635, 5.25349, -7.93794, 16.5435, 2.73561, 11.6596, 12.0518, 11.8564, 4.79521, 7.01886, 5.91864, 4.24371, 11.9446, 0.146322, 3.36171, -7.0088)
+depth = 3.0
+material = ExtResource("1_4uo4d")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj880hpbwm662"]
+
+[ext_resource type="Material" uid="uid://cqbp5udeo0r7t" path="res://Materials/Dirt.tres" id="1_viier"]
+
+[node name="Cliff1" type="CSGPolygon3D"]
+use_collision = true
+polygon = PackedVector2Array(-4.2928, -0.457751, -4.23322, 1.03263, -3.28428, 3.49129, -1.7697, 3.20273, 0.0168838, 3.67483, 1.50286, 3.16662, 2.93311, 3.66083, 4.24935, 3.13487, 4.93437, -0.86305, 1.81842, -1.79663, -1.59168, -1.86526)
+depth = 5.0
+material = ExtResource("1_viier")

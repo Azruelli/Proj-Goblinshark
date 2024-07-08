@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7csxsvcdpvat"]
+
+[ext_resource type="Material" uid="uid://lyttuyfntbf1" path="res://Materials/Quartz.tres" id="1_uw8t2"]
+
+[node name="Cliff1" type="CSGPolygon3D"]
+use_collision = true
+polygon = PackedVector2Array(-4.2928, -0.457751, -4.1567, 1.76436, -1.81994, 2.26848, 4.77404, 1.39025, 4.93437, -0.86305, -1.59168, -1.86526)
+depth = 5.0
+material = ExtResource("1_uw8t2")

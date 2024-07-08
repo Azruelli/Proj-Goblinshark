@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0dnhvns2clik"]
+
+[ext_resource type="Texture2D" uid="uid://c4tn4jhymlli4" path="res://Textures/Unsorted/461223113.jpg" id="1_afah1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3qh70"]
+albedo_color = Color(0.811765, 1, 1, 1)
+metallic = 1.0
+metallic_texture = ExtResource("1_afah1")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xnuu6"]
+blend_mode = 1
+albedo_color = Color(0, 1, 1, 1)
+
+[node name="MajorLoot" type="CSGTorus3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.49012e-08, 0)
+outer_radius = 1.5
+sides = 6
+ring_sides = 3
+material = SubResource("StandardMaterial3D_3qh70")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+radius = 1.0
+sides = 6
+material = SubResource("StandardMaterial3D_xnuu6")

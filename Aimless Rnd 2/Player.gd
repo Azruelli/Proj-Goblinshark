@@ -11,14 +11,14 @@ var player_health = player_health_maximum
 #var player_is_on_floor = is_on_floor()
 
 #Ground 
-const SPEED = 8.0
+const SPEED = 6.0
 
 #Jump
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 6.5
 
 #Air Values
 const AIR_FRICTION = .996
-const AIR_SPEED = 10.0 
+const AIR_SPEED = 8.0 
 
 var AIRTIME_MAXIMUM = 1
 var AIRTIME = AIRTIME_MAXIMUM

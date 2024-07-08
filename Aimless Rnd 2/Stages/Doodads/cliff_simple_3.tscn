@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuq5juqokt5qc"]
+
+[ext_resource type="Material" uid="uid://cqbp5udeo0r7t" path="res://Materials/Dirt.tres" id="1_q2i1a"]
+
+[node name="CSGPolygon3D" type="CSGPolygon3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0, -1.25)
+use_collision = true
+polygon = PackedVector2Array(-4.25, -1, -5.9504, 1.66152, -4.20571, 4.44375, -0.5, 7.25, 3.21968, 6.67498, 8.45515, 3.23741, 6.54539, -0.725875, 3.64258, -2.35208, -0.998121, -2.39237)
+depth = 6.0
+material = ExtResource("1_q2i1a")

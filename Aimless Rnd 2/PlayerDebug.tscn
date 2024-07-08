@@ -1,0 +1,87 @@
+[gd_scene load_steps=16 format=3 uid="uid://dd4yivd8spy22"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_mt1m7"]
+[ext_resource type="Script" path="res://Player/Player Camera/Camera3D.gd" id="2_vdop7"]
+[ext_resource type="PackedScene" uid="uid://bh6oryxhdrptf" path="res://hand.tscn" id="3_l77oh"]
+[ext_resource type="PackedScene" uid="uid://cnf342mhj32pk" path="res://machine_gun.tscn" id="4_ey3q0"]
+[ext_resource type="PackedScene" uid="uid://dmhsjvgbwujh0" path="res://bullet_ray.tscn" id="5_kk4tg"]
+[ext_resource type="PackedScene" uid="uid://c2j4vmrajhjiw" path="res://crosshair.tscn" id="6_vxaex"]
+[ext_resource type="Script" path="res://Player/Player States/FiniteStateMachine.gd" id="7_lgbgy"]
+[ext_resource type="Script" path="res://Player/Player Camera/CameraUnlocked.gd" id="8_t86eq"]
+[ext_resource type="Script" path="res://Player/Player Camera/CameraLocked.gd" id="9_jk834"]
+[ext_resource type="Script" path="res://Player/Player States/player_idle.gd" id="10_881fy"]
+[ext_resource type="Script" path="res://Player/Player States/player_walking.gd" id="11_2vwyd"]
+[ext_resource type="Script" path="res://Player/Player States/player_air.gd" id="12_d8wa0"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_a0hi8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pat1n"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_7pa2i"]
+flip_faces = true
+size = Vector2(2, 2)
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+script = ExtResource("1_mt1m7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_a0hi8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_pat1n")
+
+[node name="CameraMount" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CameraMount"]
+top_level = true
+far = 16000.0
+script = ExtResource("2_vdop7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CameraMount/Camera3D"]
+visible = false
+mesh = SubResource("QuadMesh_7pa2i")
+
+[node name="Hand" parent="CameraMount/Camera3D" instance=ExtResource("3_l77oh")]
+
+[node name="MachineGun" parent="CameraMount/Camera3D/Hand" instance=ExtResource("4_ey3q0")]
+transform = Transform3D(0.095, 0, 0, 0, 0.08, 0, 0, 0, 1, 0.264882, -0.150864, -0.191909)
+
+[node name="Raycast Bullet" parent="CameraMount/Camera3D" instance=ExtResource("5_kk4tg")]
+visible = false
+target_position = Vector3(0, 0, -1000)
+
+[node name="crosshair" parent="CameraMount/Camera3D" instance=ExtResource("6_vxaex")]
+
+[node name="RaycastLockon" type="RayCast3D" parent="CameraMount/Camera3D"]
+target_position = Vector3(0, 0, -21)
+
+[node name="FiniteStateMachine2" type="Node" parent="CameraMount" node_paths=PackedStringArray("initial_state")]
+script = ExtResource("7_lgbgy")
+initial_state = NodePath("CameraUnlocked")
+
+[node name="CameraUnlocked" type="Node" parent="CameraMount/FiniteStateMachine2" node_paths=PackedStringArray("camera")]
+script = ExtResource("8_t86eq")
+camera = NodePath("../..")
+
+[node name="CameraLocked" type="Node" parent="CameraMount/FiniteStateMachine2" node_paths=PackedStringArray("camera")]
+script = ExtResource("9_jk834")
+camera = NodePath("../../..")
+
+[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("7_lgbgy")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("player")]
+script = ExtResource("10_881fy")
+player = NodePath("../..")
+
+[node name="Walking" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("player")]
+script = ExtResource("11_2vwyd")
+player = NodePath("../..")
+
+[node name="Air" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("player")]
+script = ExtResource("12_d8wa0")
+player = NodePath("../..")
+
+[connection signal="Shot_fired" from="CameraMount/Camera3D/Hand/MachineGun" to="." method="_on_machine_gun_shot_fired"]
+[connection signal="Shot_fired" from="CameraMount/Camera3D/Hand/MachineGun" to="CameraMount/Camera3D/crosshair" method="_on_machine_gun_shot_fired"]
