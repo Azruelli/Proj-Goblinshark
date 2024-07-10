@@ -1,7 +1,4 @@
 res://Stages/Chapel_Outskirts.tscn
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 res://Materials/Dirtalt.tres
 res://Materials/tempgreen.tres
 res://Materials/light_stone.tres
@@ -21,10 +18,6 @@ res://Materials/fester.tres
 res://Materials/CrackedStone.tres
 res://Materials/GrowthLight.tres
 res://Materials/Bloodstone.tres
-=======
->>>>>>> Stashed changes
-res://Player/Player States/player_air.gd
-res://Zealot/StateTimer.gd
 res://Stages/chapel_rough.tscn
 res://Stages/Doodads/MinorLoot.tscn
 res://Stages/Doodads/Signifier.tscn
@@ -35,8 +28,4 @@ res://Stages/Doodads/Chapel/plasma_chandelier.tscn
 res://Stages/Doodads/cliff_detailed_1.tscn
 res://Stages/Doodads/cliff_detailed_2.tscn
 res://Stages/Doodads/growth_platform.tscn
-res://Player.gd
-<<<<<<< Updated upstream
-=======
->>>>>>> cc2a527bc97465945ab98535e2d625e368b12281
->>>>>>> Stashed changes
+res://Debug.tscn
