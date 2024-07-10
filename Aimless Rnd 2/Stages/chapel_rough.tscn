@@ -1270,6 +1270,87 @@ operation = 2
 radius = 3.00313
 material = ExtResource("23_pu0pt")
 
+[node name="CSGCylinder3D24" type="CSGCylinder3D" parent="Outside"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.3915, -12.5478, -15.8152)
+use_collision = true
+radius = 6.10795
+height = 23.952
+sides = 5
+material = ExtResource("22_fcrrx")
+
+[node name="CSGCylinder3D12" type="CSGCylinder3D" parent="Outside/CSGCylinder3D24"]
+operation = 2
+radius = 4.98192
+height = 23.952
+sides = 5
+material = ExtResource("22_fcrrx")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Outside/CSGCylinder3D24"]
+transform = Transform3D(0.792588, 0, 0.609758, 0, 1, 0, -0.609758, 0, 0.792588, 3.63265, -4.26487, -2.69333)
+operation = 2
+size = Vector3(2.40381, 1.76379, 5.41882)
+material = ExtResource("22_fcrrx")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Outside/CSGCylinder3D24"]
+transform = Transform3D(0.792588, 0, 0.609758, 0, 1, 0, -0.609758, 0, 0.792588, 3.63265, -4.26487, -2.69333)
+operation = 2
+size = Vector3(2.40381, 1.76379, 5.41882)
+material = ExtResource("22_fcrrx")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Outside/CSGCylinder3D24"]
+transform = Transform3D(-0.25445, 0, 0.967086, 0, 1, 0, -0.967086, 0, -0.25445, -1.14497, -4.26487, -4.09807)
+operation = 2
+size = Vector3(2.40381, 1.76379, 5.82176)
+material = ExtResource("22_fcrrx")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Outside/CSGCylinder3D24"]
+transform = Transform3D(-0.990897, 0, -0.134626, 0, 1, 0, 0.134626, 0, -0.990897, -4.53979, -4.26487, 0.171763)
+operation = 2
+size = Vector3(2.40381, 1.76379, 5.82176)
+material = ExtResource("22_fcrrx")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Outside/CSGCylinder3D24"]
+transform = Transform3D(0.792503, 0, -0.609869, 0, 1, 0, 0.609869, 0, 0.792503, 3.22899, -4.26487, 2.15896)
+operation = 2
+size = Vector3(2.40381, 1.76379, 5.41882)
+material = ExtResource("22_fcrrx")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Outside/CSGCylinder3D24"]
+transform = Transform3D(0.937404, 0, -0.348245, 0, 1, 0, 0.348245, 0, 0.937404, -1.59219, -2.28195, 4.68653)
+operation = 2
+radius = 3.00313
+material = ExtResource("23_pu0pt")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Outside/CSGCylinder3D24"]
+transform = Transform3D(0.792588, 0, 0.609758, 0, 1, 0, -0.609758, 0, 0.792588, 3.63265, 10.1532, -2.69333)
+operation = 2
+size = Vector3(2.40381, 1.76379, 5.41882)
+material = ExtResource("22_fcrrx")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Outside/CSGCylinder3D24"]
+transform = Transform3D(-0.25445, 0, 0.967086, 0, 1, 0, -0.967086, 0, -0.25445, -1.14497, 10.1532, -4.09807)
+operation = 2
+size = Vector3(2.40381, 1.76379, 5.82176)
+material = ExtResource("22_fcrrx")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Outside/CSGCylinder3D24"]
+transform = Transform3D(-0.990897, 0, -0.134626, 0, 1, 0, 0.134626, 0, -0.990897, -4.53979, 10.1532, 0.171763)
+operation = 2
+size = Vector3(2.40381, 1.76379, 5.82176)
+material = ExtResource("22_fcrrx")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Outside/CSGCylinder3D24"]
+transform = Transform3D(0.792503, 0, -0.609869, 0, 1, 0, 0.609869, 0, 0.792503, 3.22899, 10.1532, 2.15896)
+operation = 2
+size = Vector3(2.40381, 1.76379, 5.41882)
+material = ExtResource("22_fcrrx")
+
+[node name="CSGSphere3D3" type="CSGSphere3D" parent="Outside/CSGCylinder3D24"]
+transform = Transform3D(0.937404, 0, -0.348245, 0, 1, 0, 0.348245, 0, 0.937404, -1.59219, 8.13611, 4.68653)
+operation = 2
+radius = 3.00313
+material = ExtResource("23_pu0pt")
+
 [node name="CSGCylinder3D12" type="CSGCylinder3D" parent="Outside"]
 transform = Transform3D(0.109354, 0.23056, -1.79177, 0.991856, 0.0385801, 0.224926, 0.0652877, -0.972293, -0.415957, 96.9588, -0.727442, -28.6937)
 use_collision = true
@@ -2055,5 +2136,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.9859, 18.6519, -13.69)
 
 [node name="CSGTorus3D11" parent="." instance=ExtResource("56_ejg33")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.5965, 18.6519, -19.2889)
+
+[node name="Cliff36" parent="." instance=ExtResource("44_1v2kk")]
+transform = Transform3D(7.02218, 0, 0, 0, 4.02867, 0, 0, 0, 2.41199, 70.2744, 4.24661, 52.4454)
+polygon = PackedVector2Array(-4.2928, -0.457751, -3.02805, 0.525857, -2.88401, 1.39532, -2.74249, 1.95367, -0.5, 3.5, 1, 2.5, 1.6757, 1.79129, 2.51697, 1.41773, 3.63814, 1.12212, 7.1296, 0.141812, 4.93437, -0.86305, -1.59168, -1.86526, -3.16978, -1.18934)
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
