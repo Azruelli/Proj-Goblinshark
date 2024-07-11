@@ -67,6 +67,11 @@ size = Vector3(15, 9.055, 0.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.26818, 0, -14.7508)
 size = Vector3(15, 9.055, 0.5)
 
+[node name="CSGBox3D7" type="CSGBox3D" parent="NavigationRegion3D/Node3D" groups=["grapplepoint"]]
+transform = Transform3D(-0.0241182, 0, 0.999709, 0, 1, 0, -0.999709, 0, -0.0241182, 15.8492, 4.06946, -2.99457)
+use_collision = true
+size = Vector3(2.16113, 7.05387, 0.5)
+
 [node name="Zealot" parent="." instance=ExtResource("4_2gwic")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -7, 0)
 

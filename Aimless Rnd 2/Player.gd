@@ -50,6 +50,7 @@ var grapple_snap = 0
 var grapple_time: int
 var grapples_maximum = 1
 var grapples_left = 1
+var latchpoint_type: String
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -99,13 +100,16 @@ func _process(delta: float) -> void:
 	tap_time_cooldown = tap_time_cooldown - 1
 
 func grapple_latch() -> void:
+	var latchpoint_type = grapplehook_ray.get_collider()
 	if Input.is_action_just_pressed("grapple") and grapplehook_ray.is_colliding() and grapples_left > 0:
 		grapples_left = grapples_left - 1
 		if not latchable:
 			latchable = true
+	#if not grapplehook_ray.is_colliding():
+		#latchpoint_type = null
 	if latchable:
 		velocity.y = 0
-		if not latchpoint_flag:
+		if not latchpoint_flag and latchpoint_type.is_in_group("grapplepoint"):
 			latchpoint = grapplehook_ray.get_collision_point() + Vector3(1, 1, 1)
 			latchpoint_flag = true
 		if latchpoint.distance_to(transform.origin) > 2:

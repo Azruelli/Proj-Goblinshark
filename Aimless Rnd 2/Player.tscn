@@ -162,10 +162,6 @@ to = NodePath("../../Dashing")
 event = &"dash"
 delay_in_seconds = "0.0"
 
-[node name="Walking" type="Node" parent="."]
-
-[node name="Air" type="Node" parent="."]
-
 [connection signal="Shot_fired" from="CameraMount/Camera3D/Hand/MachineGun" to="." method="_on_machine_gun_shot_fired"]
 [connection signal="Shot_fired" from="CameraMount/Camera3D/Hand/MachineGun" to="CameraMount/Camera3D/crosshair" method="_on_machine_gun_shot_fired"]
 [connection signal="state_entered" from="PlayerFSM/PlayerRoot/Dashing" to="." method="_on_dashing_state_entered"]
