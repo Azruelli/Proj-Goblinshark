@@ -1,7 +1,7 @@
-res://Debug.tscn
+res://Player.tscn
 res://Player/Player States/player_air.gd
 res://Zealot/StateTimer.gd
-res://Player.tscn
+res://Debug.tscn
 res://targetable_node.tscn
 res://machine_gun.tscn
 res://bullet_ray.tscn
@@ -11,4 +11,6 @@ res://crosshair.tscn
 res://Zealot/zealot.tscn
 res://zealot_projectile.tscn
 res://zealot_sword.tscn
-res://Player.gd
+res://Stages/Chapel_Outskirts.tscn
+res://Stages/chapel_rough.tscn
+res://Shaders/PS1NP.gdshader

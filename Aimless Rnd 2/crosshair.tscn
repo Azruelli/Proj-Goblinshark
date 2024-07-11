@@ -173,4 +173,4 @@ libraries = {
 "": SubResource("AnimationLibrary_8waoo")
 }
 autoplay = "RESET"
-blend_times = [&"RESET", &"RESET", 0.5, &"RESET", &"Blooming", 0.1, &"Blooming", &"RESET", 0.5, &"Blooming", &"Blooming", 0.1]
+blend_times = [&"Blooming", &"Blooming", 0.1, &"Blooming", &"RESET", 0.5, &"RESET", &"Blooming", 0.1, &"RESET", &"RESET", 0.5]
