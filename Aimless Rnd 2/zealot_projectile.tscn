@@ -9,15 +9,27 @@ albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_3net4"]
 
-[node name="Zealot Projectile" type="Node3D"]
+[node name="Zealot Projectile" type="RigidBody3D"]
+top_level = true
+gravity_scale = 0.01
+can_sleep = false
+continuous_cd = true
+max_contacts_reported = 5
+contact_monitor = true
 script = ExtResource("1_f44us")
 
 [node name="Area3D" type="Area3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
+visible = false
 shape = SubResource("SphereShape3D_gb45m")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_7bg3i")
 mesh = SubResource("SphereMesh_3net4")
-skeleton = NodePath("../Area3D/CollisionShape3D")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_gb45m")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

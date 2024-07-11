@@ -8,6 +8,7 @@ const zealot_transformed_speed = 8.0
 const zealot_turn_speed = 2
 
 var attack_able = 0
+var melee_able = false
 var zealot_awoken = 0 
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -15,8 +16,8 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var ray_cast_3d: RayCast3D = $ZealotEyes/RayCast3D
 @onready var player_pos: Player = $"../Player"
 @onready var zealot_eyes: Node3D = $ZealotEyes
-
-
+@onready var zealot_projectile: Node3D = $"."
+@onready var projectile = preload("res://zealot_projectile.tscn")
 
 var player
 
@@ -49,6 +50,13 @@ func _physics_process(delta: float) -> void:
 		#else:
 			#check_collider = null
 			#print("don't see")
+	var fire_direction = (zealot_eyes.global_transform.origin).normalized()
+	if attack_able == 1:
+		if melee_able == true:
+			pass
+		if melee_able == false:
+			fire_projectile(fire_direction)
+			print("Projectile fired")
 
 	move_and_slide()
 
@@ -56,3 +64,11 @@ func _physics_process(delta: float) -> void:
 func wake_up() -> void:
 	if health < 100: 
 		zealot_awoken = 1 
+
+func fire_projectile(Dir: Vector3) -> void:
+	var world = get_tree().get_root()
+	var projectile_instance = projectile.instantiate()
+	world.add_child(projectile_instance)
+	
+	projectile_instance.set_global_transform(player.global_transform)
+	projectile_instance.set_linear_velocity(Dir * 40)

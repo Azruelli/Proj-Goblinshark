@@ -28,3 +28,6 @@ func _physics_process(delta: float) -> void:
 			player.velocity.x = direction.x * (player.AIRTIME * player.AIR_SPEED)
 			player.velocity.z = direction.z * (player.AIRTIME * player.AIR_SPEED)
 			player.AIRTIME = player.AIRTIME * player.AIR_FRICTION
+		else:
+			player.velocity.x = move_toward(direction.x * (player.AIRTIME * player.AIR_SPEED), 0, player.SPEED * delta * 0.5)
+			player.velocity.z = move_toward(direction.z * (player.AIRTIME * player.AIR_SPEED), 0, player.SPEED * delta * 0.5)

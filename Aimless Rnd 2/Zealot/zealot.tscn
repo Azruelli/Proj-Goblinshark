@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d0f31ob8ps6al"]
+[gd_scene load_steps=11 format=3 uid="uid://d0f31ob8ps6al"]
 
 [ext_resource type="Script" path="res://Player/Player States/FiniteStateMachine.gd" id="1_n7f0t"]
 [ext_resource type="Script" path="res://Zealot/Zealot.gd" id="1_yn0vs"]
@@ -13,6 +13,8 @@
 albedo_color = Color(0.203922, 1, 1, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_pfe5l"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6ufp4"]
 
 [node name="Zealot" type="CharacterBody3D" groups=["Enemy"]]
 script = ExtResource("1_yn0vs")
@@ -53,5 +55,16 @@ script = ExtResource("6_mp0p8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.303104, 0.585854)
 target_position = Vector3(0, 0, -35)
 
+[node name="Marker3D" type="Marker3D" parent="ZealotEyes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0553975, -0.732885)
+
+[node name="Melee Distance" type="Area3D" parent="."]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0.178668, -1.2511)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Melee Distance"]
+shape = SubResource("SphereShape3D_6ufp4")
+
 [connection signal="timeout" from="StateTimer" to="." method="_on_state_timer_timeout"]
 [connection signal="timeout" from="StateTimer" to="FiniteStateMachine/ZealotAwake" method="_on_state_timer_timeout"]
+[connection signal="body_entered" from="Melee Distance" to="FiniteStateMachine/ZealotAttacking" method="_on_melee_distance_body_entered"]
+[connection signal="body_exited" from="Melee Distance" to="FiniteStateMachine/ZealotAttacking" method="_on_melee_distance_body_exited"]

@@ -1,17 +1,19 @@
-[gd_scene load_steps=16 format=3 uid="uid://diqcix80tn6ba"]
+[gd_scene load_steps=18 format=3 uid="uid://diqcix80tn6ba"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_aeytj"]
 [ext_resource type="Script" path="res://Player/Player States/FiniteStateMachine.gd" id="2_5ggw2"]
 [ext_resource type="Script" path="res://Player/Player Camera/Camera3D.gd" id="2_goduv"]
 [ext_resource type="PackedScene" uid="uid://bh6oryxhdrptf" path="res://hand.tscn" id="3_evsne"]
-[ext_resource type="Script" path="res://Player/Player States/player_idle.gd" id="3_uuswf"]
-[ext_resource type="Script" path="res://Player/Player States/player_walking.gd" id="4_pbaa5"]
 [ext_resource type="PackedScene" uid="uid://cnf342mhj32pk" path="res://machine_gun.tscn" id="4_se0kx"]
 [ext_resource type="Script" path="res://Player/Player Camera/CameraUnlocked.gd" id="4_sj8r2"]
 [ext_resource type="PackedScene" uid="uid://dmhsjvgbwujh0" path="res://bullet_ray.tscn" id="5_p7x1a"]
-[ext_resource type="Script" path="res://Player/Player States/player_air.gd" id="5_ton63"]
 [ext_resource type="Script" path="res://Player/Player Camera/CameraLocked.gd" id="9_24f6h"]
 [ext_resource type="PackedScene" uid="uid://c2j4vmrajhjiw" path="res://crosshair.tscn" id="11_e5cpp"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/state_chart.gd" id="13_ck6y8"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/parallel_state.gd" id="14_0y1iy"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/compound_state.gd" id="14_ycah3"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/atomic_state.gd" id="15_y6iga"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/transition.gd" id="16_vr4ku"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_a0hi8"]
 
@@ -47,13 +49,16 @@ mesh = SubResource("QuadMesh_7pa2i")
 transform = Transform3D(0.095, 0, 0, 0, 0.08, 0, 0, 0, 1, 0.264882, -0.150864, -0.191909)
 
 [node name="Raycast Bullet" parent="CameraMount/Camera3D" instance=ExtResource("5_p7x1a")]
-visible = false
 target_position = Vector3(0, 0, -1000)
 
 [node name="crosshair" parent="CameraMount/Camera3D" instance=ExtResource("11_e5cpp")]
+metadata/_edit_use_anchors_ = true
 
 [node name="RaycastLockon" type="RayCast3D" parent="CameraMount/Camera3D"]
 target_position = Vector3(0, 0, -21)
+
+[node name="GrapplehookRay" type="RayCast3D" parent="CameraMount/Camera3D"]
+target_position = Vector3(0, 0, -40)
 
 [node name="FiniteStateMachine2" type="Node" parent="CameraMount" node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_5ggw2")
@@ -67,21 +72,97 @@ camera = NodePath("../..")
 script = ExtResource("9_24f6h")
 camera = NodePath("../../..")
 
-[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
-script = ExtResource("2_5ggw2")
+[node name="PlayerFSM" type="Node" parent="."]
+script = ExtResource("13_ck6y8")
+
+[node name="PlayerRoot" type="Node" parent="PlayerFSM"]
+script = ExtResource("14_ycah3")
 initial_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("player")]
-script = ExtResource("3_uuswf")
-player = NodePath("../..")
+[node name="Idle" type="Node" parent="PlayerFSM/PlayerRoot"]
+script = ExtResource("15_y6iga")
 
-[node name="Walking" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("player")]
-script = ExtResource("4_pbaa5")
-player = NodePath("../..")
+[node name="ToWalk" type="Node" parent="PlayerFSM/PlayerRoot/Idle"]
+script = ExtResource("16_vr4ku")
+to = NodePath("../../Walking")
+event = &"walking"
+delay_in_seconds = "0.0"
 
-[node name="Air" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("player")]
-script = ExtResource("5_ton63")
-player = NodePath("../..")
+[node name="ToAir" type="Node" parent="PlayerFSM/PlayerRoot/Idle"]
+script = ExtResource("16_vr4ku")
+to = NodePath("../../Air")
+event = &"air"
+delay_in_seconds = "0.0"
+
+[node name="Dashing" type="Node" parent="PlayerFSM/PlayerRoot"]
+script = ExtResource("15_y6iga")
+
+[node name="ToWalk" type="Node" parent="PlayerFSM/PlayerRoot/Dashing"]
+script = ExtResource("16_vr4ku")
+to = NodePath("../../Walking")
+event = &"walking"
+delay_in_seconds = "0.0"
+
+[node name="ToAir" type="Node" parent="PlayerFSM/PlayerRoot/Dashing"]
+script = ExtResource("16_vr4ku")
+to = NodePath("../../Air")
+event = &"air"
+delay_in_seconds = "3.0"
+
+[node name="Air" type="Node" parent="PlayerFSM/PlayerRoot"]
+script = ExtResource("15_y6iga")
+
+[node name="ToIdle" type="Node" parent="PlayerFSM/PlayerRoot/Air"]
+script = ExtResource("16_vr4ku")
+to = NodePath("../../Idle")
+event = &"idle"
+delay_in_seconds = "0.0"
+
+[node name="ToWalk" type="Node" parent="PlayerFSM/PlayerRoot/Air"]
+script = ExtResource("16_vr4ku")
+to = NodePath("../../Walking")
+event = &"walking"
+delay_in_seconds = "0.0"
+
+[node name="GrappleAir" type="Node" parent="PlayerFSM/PlayerRoot"]
+script = ExtResource("14_0y1iy")
+
+[node name="Grappled" type="Node" parent="PlayerFSM/PlayerRoot/GrappleAir"]
+script = ExtResource("15_y6iga")
+
+[node name="Air" type="Node" parent="PlayerFSM/PlayerRoot/GrappleAir"]
+script = ExtResource("15_y6iga")
+
+[node name="Walking" type="Node" parent="PlayerFSM/PlayerRoot"]
+script = ExtResource("15_y6iga")
+
+[node name="ToIdle" type="Node" parent="PlayerFSM/PlayerRoot/Walking"]
+script = ExtResource("16_vr4ku")
+to = NodePath("../../Idle")
+event = &"idle"
+delay_in_seconds = "0.0"
+
+[node name="ToAir" type="Node" parent="PlayerFSM/PlayerRoot/Walking"]
+script = ExtResource("16_vr4ku")
+to = NodePath("../../Air")
+event = &"air"
+delay_in_seconds = "0.0"
+
+[node name="ToDash" type="Node" parent="PlayerFSM/PlayerRoot/Walking"]
+script = ExtResource("16_vr4ku")
+to = NodePath("../../Dashing")
+event = &"dash"
+delay_in_seconds = "0.0"
+
+[node name="Walking" type="Node" parent="."]
+
+[node name="Air" type="Node" parent="."]
 
 [connection signal="Shot_fired" from="CameraMount/Camera3D/Hand/MachineGun" to="." method="_on_machine_gun_shot_fired"]
 [connection signal="Shot_fired" from="CameraMount/Camera3D/Hand/MachineGun" to="CameraMount/Camera3D/crosshair" method="_on_machine_gun_shot_fired"]
+[connection signal="state_entered" from="PlayerFSM/PlayerRoot/Dashing" to="." method="_on_dashing_state_entered"]
+[connection signal="state_physics_processing" from="PlayerFSM/PlayerRoot/Dashing" to="." method="_on_dashing_state_physics_processing"]
+[connection signal="state_entered" from="PlayerFSM/PlayerRoot/Air" to="." method="_on_air_state_entered"]
+[connection signal="state_physics_processing" from="PlayerFSM/PlayerRoot/Air" to="." method="_on_air_state_physics_processing"]
+[connection signal="state_entered" from="PlayerFSM/PlayerRoot/Walking" to="." method="_on_walking_state_entered"]
+[connection signal="state_physics_processing" from="PlayerFSM/PlayerRoot/Walking" to="." method="_on_walking_state_physics_processing"]

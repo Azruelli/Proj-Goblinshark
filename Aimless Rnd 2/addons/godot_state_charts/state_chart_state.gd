@@ -47,7 +47,7 @@ var _pending_transition_remaining_delay:float = 0
 ## The initial time of the pending transition.
 var _pending_transition_initial_delay:float = 0
 
-## Transitions in this state that react on events. 
+## Transitions in this state that react on  events. 
 var _transitions:Array[Transition] = []
 
 

@@ -1,5 +1,5 @@
 class_name Idle
-extends PlayerState
+extends Player
 
 
 
@@ -8,8 +8,7 @@ func enter() -> void:
 	print("idle")
 
 func update(float) -> void:
-	if not player.is_on_floor():
-		Transitioned.emit("player_air")
+	pass
 
 	#if player.is_on_floor():
 		#if player.input_event == Input.get("Forward") or Input.get("Backward") or Input.get("Left") or Input.get("Right"):
