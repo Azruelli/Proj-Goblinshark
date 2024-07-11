@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 res://Materials/Dirtalt.tres
 res://Materials/tempgreen.tres
 res://Materials/light_stone.tres
@@ -17,3 +18,21 @@ res://Materials/fester.tres
 res://Materials/CrackedStone.tres
 res://Materials/GrowthLight.tres
 res://Materials/Bloodstone.tres
+=======
+res://Player.tscn
+res://Player/Player States/player_air.gd
+res://Zealot/StateTimer.gd
+res://Debug.tscn
+res://targetable_node.tscn
+res://machine_gun.tscn
+res://bullet_ray.tscn
+res://hand.tscn
+res://DummyEnemy.tscn
+res://crosshair.tscn
+res://Zealot/zealot.tscn
+res://zealot_projectile.tscn
+res://zealot_sword.tscn
+res://Stages/Chapel_Outskirts.tscn
+res://Stages/chapel_rough.tscn
+res://Shaders/PS1NP.gdshader
+>>>>>>> f2b833e9cd6d422594970eff07f28f50b287ee97

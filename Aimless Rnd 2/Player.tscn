@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://diqcix80tn6ba"]
+[gd_scene load_steps=20 format=3 uid="uid://diqcix80tn6ba"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_aeytj"]
 [ext_resource type="Script" path="res://Player/Player States/FiniteStateMachine.gd" id="2_5ggw2"]
 [ext_resource type="Script" path="res://Player/Player Camera/Camera3D.gd" id="2_goduv"]
+[ext_resource type="Shader" path="res://Shaders/PS1.gdshader" id="3_2olid"]
 [ext_resource type="PackedScene" uid="uid://bh6oryxhdrptf" path="res://hand.tscn" id="3_evsne"]
 [ext_resource type="PackedScene" uid="uid://cnf342mhj32pk" path="res://machine_gun.tscn" id="4_se0kx"]
 [ext_resource type="Script" path="res://Player/Player Camera/CameraUnlocked.gd" id="4_sj8r2"]
@@ -18,6 +19,13 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_a0hi8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pat1n"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w7exr"]
+render_priority = 0
+shader = ExtResource("3_2olid")
+shader_parameter/color_depth = 5
+shader_parameter/dithering = true
+shader_parameter/resolution_scale = 4
 
 [sub_resource type="QuadMesh" id="QuadMesh_7pa2i"]
 flip_faces = true
@@ -40,7 +48,7 @@ far = 16000.0
 script = ExtResource("2_goduv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CameraMount/Camera3D"]
-visible = false
+material_override = SubResource("ShaderMaterial_w7exr")
 mesh = SubResource("QuadMesh_7pa2i")
 
 [node name="Hand" parent="CameraMount/Camera3D" instance=ExtResource("3_evsne")]

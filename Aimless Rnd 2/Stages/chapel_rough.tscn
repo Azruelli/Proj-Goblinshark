@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://dsnjswmwkr81d"]
+[gd_scene load_steps=79 format=3 uid="uid://dsnjswmwkr81d"]
 
 [ext_resource type="Texture2D" uid="uid://dsmeca45yewkt" path="res://Textures/Skybox/schachen_forest_4k.hdr" id="1_khla1"]
 [ext_resource type="PackedScene" uid="uid://diqcix80tn6ba" path="res://Player.tscn" id="2_r5elt"]
@@ -17,7 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://b2b72kcsbpv48" path="res://Stages/Doodads/Chapel/rug_1.tscn" id="15_7x5di"]
 [ext_resource type="PackedScene" uid="uid://bexsusptpilw7" path="res://Stages/Doodads/Chapel/rug_2.tscn" id="16_q6epg"]
 [ext_resource type="Texture2D" uid="uid://eksbitd0y6xq" path="res://Textures/Unsorted/concrete.png" id="17_8wb8x"]
+[ext_resource type="Texture2D" uid="uid://dfgxs3bvofmo" path="res://Textures/Unsorted/weave-blue-hair.png" id="17_qayug"]
 [ext_resource type="Texture2D" uid="uid://c3eoq6j7bwatp" path="res://Textures/Noise/Marble/Marble 9 - 512x512.png" id="18_cqd15"]
+[ext_resource type="Texture2D" uid="uid://bjvdmsry1qbhk" path="res://Textures/Unsorted/461223108.jpg" id="18_k8odx"]
 [ext_resource type="Texture2D" uid="uid://b0678rsfxyhri" path="res://Textures/Vegetation/Vegetation (44).png" id="19_0c3j8"]
 [ext_resource type="Texture2D" uid="uid://dsfn7i5tdtnwc" path="res://Textures/Unsorted/461223182.jpg" id="20_4ioas"]
 [ext_resource type="Texture2D" uid="uid://35xwwvsnf10f" path="res://Textures/Noise/Melt/Melt 7 - 512x512.png" id="21_cce51"]
@@ -69,7 +71,13 @@ background_mode = 2
 sky = SubResource("Sky_a4frd")
 sky_rotation = Vector3(1.22173, 0, 0)
 ssao_enabled = true
+glow_enabled = true
+glow_bloom = 0.6
+glow_blend_mode = 1
+glow_hdr_luminance_cap = 3.0
+glow_map_strength = 0.7
 fog_light_color = Color(0.476798, 0.575023, 0.552696, 1)
+volumetric_fog_enabled = true
 volumetric_fog_density = 0.03
 volumetric_fog_emission = Color(0.0901961, 0, 0.270588, 1)
 
@@ -85,6 +93,14 @@ uv1_triplanar = true
 albedo_color = Color(0, 1, 1, 1)
 emission = Color(0, 1, 1, 1)
 emission_energy_multiplier = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ncxd1"]
+albedo_texture = ExtResource("17_qayug")
+rim_tint = 0.0
+rim_texture = ExtResource("18_k8odx")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gmfgp"]
 albedo_texture = ExtResource("17_8wb8x")
@@ -242,7 +258,7 @@ spot_range = 51.1988
 spot_angle = 32.473
 
 [node name="Player" parent="." instance=ExtResource("2_r5elt")]
-transform = Transform3D(-1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, -1, 50.661, 21.3609, -65.6294)
+transform = Transform3D(-1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, -1, 0, 2.10338, 0)
 
 [node name="Chapel" type="Node" parent="."]
 
@@ -802,6 +818,7 @@ size = Vector3(3, 0.2, 3)
 
 [node name="Rug3" parent="Chapel/Doodads" instance=ExtResource("16_q6epg")]
 transform = Transform3D(-1.62746, 5.16191e-08, 1.16248, 5.96046e-08, 2, -7.45058e-09, -1.16248, 2.98023e-08, -1.62746, -8, -6.68711, 19)
+material = SubResource("StandardMaterial3D_ncxd1")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Chapel/Doodads"]
 transform = Transform3D(0.653196, -0.372314, 0.659331, 0.190666, 0.923579, 0.332639, -0.73279, -0.0915663, 0.674265, 5.83413, 0.204208, 18.805)
