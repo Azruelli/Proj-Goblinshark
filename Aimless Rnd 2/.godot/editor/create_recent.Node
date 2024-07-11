@@ -1,3 +1,6 @@
+MeshInstance3D
+CollisionShape3D
+Area3D
 RayCast3D
 AtomicState
 StateChartState
@@ -5,10 +8,7 @@ CompoundState
 StateChart
 Marker3D
 RigidBody3D
-CollisionShape3D
-Area3D
 Node3D
-MeshInstance3D
 Timer
 NavigationAgent3D
 NavigationRegion3D

@@ -1,48 +1,9 @@
-<<<<<<< HEAD
-res://Stages/chapel_rough.tscn
-=======
-<<<<<<< HEAD
-res://Materials/Dirtalt.tres
-res://Materials/tempgreen.tres
-res://Materials/light_stone.tres
-res://Materials/light_stone_interior.tres
-res://Materials/Smooth_Stone_1.tres
-res://Materials/Bricks.tres
-res://Materials/Underwater.tres
-res://Materials/Bloodstonealt.tres
-res://Materials/tempglass.tres
-res://Materials/Dirt.tres
-res://Materials/tempdestructible.tres
-res://Materials/Growth.tres
-res://Materials/Flesh_Root_Thick.tres
-res://Materials/Flesh_Root.tres
-res://Materials/Flesh_Root_Innards.tres
-res://Materials/fester.tres
-res://Materials/CrackedStone.tres
-res://Materials/GrowthLight.tres
-res://Materials/Bloodstone.tres
-=======
-res://Player.tscn
->>>>>>> cf10d7f5f53cb7e6d5ac2b7286035afb114a2899
+res://Debug.tscn
 res://Player/Player States/player_air.gd
 res://Zealot/StateTimer.gd
-res://Shaders/PS1NP.gdshader
-res://Debug.tscn
-res://Player.tscn
-res://targetable_node.tscn
-res://machine_gun.tscn
-res://bullet_ray.tscn
-res://hand.tscn
-res://DummyEnemy.tscn
-res://crosshair.tscn
-res://Zealot/zealot.tscn
-res://zealot_projectile.tscn
-res://zealot_sword.tscn
-res://Stages/Chapel_Outskirts.tscn
-<<<<<<< HEAD
+res://Global Scripts/ObjDestructible.gd
+res://Powerups/Meshes/Grapple_extend.tscn
+res://Powerups/Meshes/dash_extend.tscn
 res://Player.gd
-=======
-res://Stages/chapel_rough.tscn
-res://Shaders/PS1NP.gdshader
->>>>>>> f2b833e9cd6d422594970eff07f28f50b287ee97
->>>>>>> cf10d7f5f53cb7e6d5ac2b7286035afb114a2899
+res://Powerups/Meshes/Grapple_extend.gd
+res://Powerups/Meshes/dash_extend.gd

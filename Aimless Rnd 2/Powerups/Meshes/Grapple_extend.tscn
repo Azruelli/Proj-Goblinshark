@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvj5hnrq1cpv1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cipqy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_isp3e"]
+albedo_color = Color(0.145098, 1, 0.152941, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_lo1bs"]
+material = SubResource("StandardMaterial3D_isp3e")
+
+[node name="GrappleExtender" type="Area3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_cipqy")
+
+[node name="GrappleExtender" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("CapsuleMesh_lo1bs")
+skeleton = NodePath("../..")

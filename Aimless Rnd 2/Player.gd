@@ -105,8 +105,6 @@ func grapple_latch() -> void:
 		grapples_left = grapples_left - 1
 		if not latchable:
 			latchable = true
-	#if not grapplehook_ray.is_colliding():
-		#latchpoint_type = null
 	if latchable:
 		velocity.y = 0
 		if not latchpoint_flag and latchpoint_type.is_in_group("grapplepoint"):
@@ -185,23 +183,16 @@ func _on_air_state_physics_processing(delta: float) -> void:
 		velocity.z = move_toward(direction.z * (AIRTIME * AIR_SPEED), 0, SPEED * delta * 0.5)
 
 
-#func _on_dashing_state_physics_processing(delta: float) -> void:
-	#var input_dir := Input.get_vector("Left", "Right", "Forward", "Backward")
-	#var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() 
-	#if direction:
-		#velocity.x = direction.x * 10
-		#velocity.z = direction.z * 10
-
-
 func reset_scene() -> void: 
 	if Input.is_action_just_pressed("ui_end"):
 		get_tree().reload_current_scene()
 
 
-#func _on_dashing_state_entered() -> void:
-		#velocity.x = direction.x * SPEED * 400
-		#velocity.z = direction.z * SPEED * 400
-		#velocity.y = DASH_JUMP_VELOCITY
-		#tap_time_cooldown = tap_time_cooldown_start
+func _on_grapple_extender_body_entered(body: Node3D) -> void:
+	if body is Player:
+		grapples_left = grapples_maximum
 
 
+func _on_dash_extender_body_entered(body: Node3D) -> void:
+	if body is Player:
+		dashing_flag = false

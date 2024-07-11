@@ -1,9 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://b5kaqqvtxak0v"]
+[gd_scene load_steps=14 format=3 uid="uid://b5kaqqvtxak0v"]
 
 [ext_resource type="PackedScene" uid="uid://diqcix80tn6ba" path="res://Player.tscn" id="1_jm7vh"]
 [ext_resource type="PackedScene" uid="uid://dt2ggbjsag7lm" path="res://targetable_node.tscn" id="2_7sv1h"]
+[ext_resource type="Script" path="res://Global Scripts/ObjDestructible.gd" id="3_pfrh1"]
 [ext_resource type="PackedScene" uid="uid://b6apxs0m53t2s" path="res://DummyEnemy.tscn" id="3_s1dji"]
 [ext_resource type="PackedScene" uid="uid://d0f31ob8ps6al" path="res://Zealot/zealot.tscn" id="4_2gwic"]
+[ext_resource type="PackedScene" uid="uid://cvj5hnrq1cpv1" path="res://Powerups/Meshes/Grapple_extend.tscn" id="5_v18fs"]
+[ext_resource type="PackedScene" uid="uid://bsm56defhh4b6" path="res://Powerups/Meshes/dash_extend.tscn" id="6_noop6"]
+[ext_resource type="Script" path="res://Powerups/Meshes/Grapple_extend.gd" id="7_6n8gp"]
+[ext_resource type="Script" path="res://Powerups/Meshes/dash_extend.gd" id="9_jn8ii"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r8plh"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -72,9 +77,28 @@ transform = Transform3D(-0.0241182, 0, 0.999709, 0, 1, 0, -0.999709, 0, -0.02411
 use_collision = true
 size = Vector3(2.16113, 7.05387, 0.5)
 
+[node name="blow me up" type="CSGBox3D" parent="NavigationRegion3D/Node3D" groups=["grapplepoint"]]
+transform = Transform3D(-0.0241182, 0, 0.999709, 0, 1, 0, -0.999709, 0, -0.0241182, -12.5776, 4.06946, 8.41418)
+use_collision = true
+size = Vector3(2.16113, 7.05387, 0.5)
+script = ExtResource("3_pfrh1")
+
 [node name="Zealot" parent="." instance=ExtResource("4_2gwic")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -7, 0)
 
 [node name="TargetableNode" parent="." instance=ExtResource("2_7sv1h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.82324, 3.09623, 0)
 top_level = true
+
+[node name="GrappleExtender" parent="." instance=ExtResource("5_v18fs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.95017, 20.9003)
+script = ExtResource("7_6n8gp")
+
+[node name="DashExtender" parent="." instance=ExtResource("6_noop6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.75492, 2.84491, 22.419)
+script = ExtResource("9_jn8ii")
+
+[connection signal="body_entered" from="GrappleExtender" to="Player" method="_on_grapple_extender_body_entered"]
+[connection signal="body_entered" from="GrappleExtender" to="GrappleExtender" method="_on_body_entered"]
+[connection signal="body_entered" from="DashExtender" to="Player" method="_on_dash_extender_body_entered"]
+[connection signal="body_entered" from="DashExtender" to="DashExtender" method="_on_body_entered"]

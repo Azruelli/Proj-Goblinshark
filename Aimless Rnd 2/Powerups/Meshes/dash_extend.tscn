@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsm56defhh4b6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qjnc4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nyshg"]
+albedo_color = Color(0, 0.109804, 1, 1)
+metallic = 0.3
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_nyefd"]
+material = SubResource("StandardMaterial3D_nyshg")
+
+[node name="Dash Extender" type="Area3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_qjnc4")
+
+[node name="DashExtender" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("CapsuleMesh_nyefd")
+skeleton = NodePath("../..")
