@@ -1,14 +1,9 @@
-[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d0bn16pc8uctt"]
-
-[ext_resource type="Texture2D" uid="uid://b7r0lnrniuc3j" path="res://Textures/Dirt/Dirt_04.png" id="1_g1jwl"]
-[ext_resource type="Texture2D" uid="uid://1s0lkuex727y" path="res://Textures/Noise/Vein/Vein 2 - 512x512.png" id="2_25fe6"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d0bn16pc8uctt"]
 
 [resource]
 albedo_color = Color(0, 1, 1, 1)
-albedo_texture = ExtResource("1_g1jwl")
 detail_enabled = true
 detail_blend_mode = 3
-detail_albedo = ExtResource("2_25fe6")
 uv1_scale = Vector3(0.06, 0.06, 0.06)
 uv1_triplanar = true
 uv1_world_triplanar = true

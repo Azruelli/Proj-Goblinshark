@@ -1,34 +1,23 @@
-[gd_scene load_steps=63 format=3 uid="uid://cy155kfqv65ld"]
+[gd_scene load_steps=52 format=3 uid="uid://cy155kfqv65ld"]
 
-[ext_resource type="Texture2D" uid="uid://dsmeca45yewkt" path="res://Textures/Skybox/schachen_forest_4k.hdr" id="1_byig2"]
 [ext_resource type="PackedScene" uid="uid://diqcix80tn6ba" path="res://Player.tscn" id="2_5oqqy"]
 [ext_resource type="Material" uid="uid://c1p646w25la8c" path="res://Materials/Dirtalt.tres" id="3_3tw40"]
 [ext_resource type="Material" uid="uid://bt0swokvsh63o" path="res://Materials/tempgreen.tres" id="4_c1bdb"]
-[ext_resource type="Texture2D" uid="uid://b7r0lnrniuc3j" path="res://Textures/Dirt/Dirt_04.png" id="5_vo6xg"]
-[ext_resource type="Texture2D" uid="uid://1s0lkuex727y" path="res://Textures/Noise/Vein/Vein 2 - 512x512.png" id="6_jfjps"]
 [ext_resource type="Material" uid="uid://ctkdy36vlfql3" path="res://Materials/light_stone.tres" id="7_mjbn1"]
 [ext_resource type="Material" uid="uid://hp5i7fc7dk4c" path="res://Materials/light_stone_interior.tres" id="8_skb1l"]
-[ext_resource type="Texture2D" uid="uid://dsfn7i5tdtnwc" path="res://Textures/Unsorted/461223182.jpg" id="9_p5mou"]
-[ext_resource type="Texture2D" uid="uid://btorh35lnjjub" path="res://Textures/Unsorted/461223101.jpg" id="10_og3fp"]
-[ext_resource type="Texture2D" uid="uid://eksbitd0y6xq" path="res://Textures/Unsorted/concrete.png" id="11_j4jgl"]
-[ext_resource type="Texture2D" uid="uid://c3eoq6j7bwatp" path="res://Textures/Noise/Marble/Marble 9 - 512x512.png" id="12_553p4"]
-[ext_resource type="Texture2D" uid="uid://tibw3li1rq45" path="res://Textures/Noise/Grainy/Grainy 2 - 512x512.png" id="13_x10jq"]
 [ext_resource type="Material" uid="uid://dsh3ucxxmpkjf" path="res://Materials/Smooth_Stone_1.tres" id="14_5e0j6"]
 [ext_resource type="Material" uid="uid://ds0kn0hbb7kxb" path="res://Materials/Bricks.tres" id="15_cat18"]
 [ext_resource type="Material" uid="uid://d0bn16pc8uctt" path="res://Materials/Underwater.tres" id="16_gocii"]
 [ext_resource type="Material" uid="uid://dq8f11h6l01nn" path="res://Materials/Bloodstonealt.tres" id="17_3tqej"]
 [ext_resource type="Material" uid="uid://dy8q4sq7pqviu" path="res://Materials/tempglass.tres" id="18_f48xc"]
-[ext_resource type="Texture2D" uid="uid://bwd4cbknmmv6d" path="res://Textures/Unsorted/461223121.jpg" id="19_egp1q"]
 [ext_resource type="PackedScene" uid="uid://4k5jpfdxi2v5" path="res://Stages/Doodads/portal.tscn" id="20_sdkae"]
 [ext_resource type="PackedScene" uid="uid://2pk7e624h0b2" path="res://Stages/Doodads/MinorLoot.tscn" id="21_w5f1c"]
 [ext_resource type="PackedScene" uid="uid://11s7a4lryhu1" path="res://Stages/Doodads/XPLoot.tscn" id="22_d166d"]
 [ext_resource type="PackedScene" uid="uid://c0dnhvns2clik" path="res://Stages/Doodads/MajorLoot.tscn" id="23_4tned"]
 [ext_resource type="PackedScene" uid="uid://c4jlncpe1d24c" path="res://Stages/Doodads/Secret.tscn" id="24_bfyat"]
 [ext_resource type="PackedScene" uid="uid://cswuuuuep5srk" path="res://Stages/Doodads/Enemy Signifier.tscn" id="25_r0rmi"]
-[ext_resource type="Texture2D" uid="uid://c4tn4jhymlli4" path="res://Textures/Unsorted/461223113.jpg" id="26_k1i0g"]
 [ext_resource type="Material" uid="uid://cqbp5udeo0r7t" path="res://Materials/Dirt.tres" id="27_pf6yq"]
 [ext_resource type="Material" uid="uid://xwcjcfkct5oy" path="res://Materials/tempdestructible.tres" id="28_w5x5l"]
-[ext_resource type="Texture2D" uid="uid://boauxe4av2x81" path="res://Textures/Noise/Swirl/Swirl 11 - 512x512.png" id="29_ve8vs"]
 [ext_resource type="Material" uid="uid://1kn71whthmc2" path="res://Materials/Growth.tres" id="30_4i76a"]
 [ext_resource type="Material" uid="uid://0mk0l2wkpa53" path="res://Materials/Flesh_Root_Thick.tres" id="31_2q3x6"]
 [ext_resource type="PackedScene" uid="uid://dj880hpbwm662" path="res://Stages/Doodads/cliff_platform1.tscn" id="32_0ipmj"]
@@ -40,7 +29,6 @@
 [ext_resource type="PackedScene" uid="uid://bfvnjgf1udgkd" path="res://Stages/Doodads/growth_platform.tscn" id="38_y15kr"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_gybyn"]
-panorama = ExtResource("1_byig2")
 filter = false
 
 [sub_resource type="Sky" id="Sky_a4frd"]
@@ -59,11 +47,9 @@ volumetric_fog_albedo = Color(1, 0.898, 0.64, 1)
 volumetric_fog_emission = Color(0.0901961, 0, 0.270588, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n83ly"]
-albedo_texture = ExtResource("5_vo6xg")
 detail_enabled = true
 detail_blend_mode = 3
 detail_uv_layer = 1
-detail_albedo = ExtResource("6_jfjps")
 uv1_scale = Vector3(0.1, 0.1, 0.1)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -71,14 +57,10 @@ uv2_triplanar = true
 uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2uvo"]
-albedo_texture = ExtResource("9_p5mou")
 heightmap_enabled = true
-heightmap_texture = ExtResource("10_og3fp")
 detail_enabled = true
-detail_mask = ExtResource("10_og3fp")
 detail_blend_mode = 2
 detail_uv_layer = 1
-detail_albedo = ExtResource("10_og3fp")
 uv1_scale = Vector3(0.07, 0.07, 0.07)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -87,11 +69,8 @@ uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4k2yu"]
 albedo_color = Color(1, 0.803922, 1, 1)
-albedo_texture = ExtResource("11_j4jgl")
 detail_enabled = true
-detail_mask = ExtResource("13_x10jq")
 detail_blend_mode = 1
-detail_albedo = ExtResource("12_553p4")
 uv1_scale = Vector3(0.1, 0.1, 0.1)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -100,14 +79,10 @@ uv2_triplanar = true
 uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8dbgv"]
-albedo_texture = ExtResource("9_p5mou")
 heightmap_enabled = true
-heightmap_texture = ExtResource("10_og3fp")
 detail_enabled = true
-detail_mask = ExtResource("10_og3fp")
 detail_blend_mode = 2
 detail_uv_layer = 1
-detail_albedo = ExtResource("10_og3fp")
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -115,14 +90,10 @@ uv2_triplanar = true
 uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jfk51"]
-albedo_texture = ExtResource("9_p5mou")
 heightmap_enabled = true
-heightmap_texture = ExtResource("10_og3fp")
 detail_enabled = true
-detail_mask = ExtResource("10_og3fp")
 detail_blend_mode = 2
 detail_uv_layer = 1
-detail_albedo = ExtResource("10_og3fp")
 uv1_scale = Vector3(0.5, 0.5, 0.5)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -130,14 +101,10 @@ uv2_triplanar = true
 uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qc7eo"]
-albedo_texture = ExtResource("9_p5mou")
 heightmap_enabled = true
-heightmap_texture = ExtResource("10_og3fp")
 detail_enabled = true
-detail_mask = ExtResource("10_og3fp")
 detail_blend_mode = 2
 detail_uv_layer = 1
-detail_albedo = ExtResource("10_og3fp")
 uv1_scale = Vector3(0.05, 0.05, 0.05)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -145,13 +112,9 @@ uv2_triplanar = true
 uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ai7hn"]
-albedo_texture = ExtResource("9_p5mou")
 heightmap_enabled = true
-heightmap_texture = ExtResource("10_og3fp")
 detail_enabled = true
-detail_mask = ExtResource("10_og3fp")
 detail_uv_layer = 1
-detail_albedo = ExtResource("10_og3fp")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -160,11 +123,8 @@ uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ug5hg"]
 albedo_color = Color(1, 0.803922, 1, 1)
-albedo_texture = ExtResource("11_j4jgl")
 detail_enabled = true
-detail_mask = ExtResource("13_x10jq")
 detail_blend_mode = 1
-detail_albedo = ExtResource("12_553p4")
 uv1_scale = Vector3(0.6, 0.6, 0.6)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -173,14 +133,10 @@ uv2_triplanar = true
 uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8n356"]
-albedo_texture = ExtResource("9_p5mou")
 heightmap_enabled = true
-heightmap_texture = ExtResource("10_og3fp")
 detail_enabled = true
-detail_mask = ExtResource("10_og3fp")
 detail_blend_mode = 2
 detail_uv_layer = 1
-detail_albedo = ExtResource("10_og3fp")
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -188,14 +144,10 @@ uv2_triplanar = true
 uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fkb15"]
-albedo_texture = ExtResource("9_p5mou")
 heightmap_enabled = true
-heightmap_texture = ExtResource("10_og3fp")
 detail_enabled = true
-detail_mask = ExtResource("10_og3fp")
 detail_blend_mode = 2
 detail_uv_layer = 1
-detail_albedo = ExtResource("10_og3fp")
 uv1_scale = Vector3(0.05, 0.05, 0.05)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -204,11 +156,8 @@ uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxoeu"]
 albedo_color = Color(1, 0.803922, 1, 1)
-albedo_texture = ExtResource("11_j4jgl")
 detail_enabled = true
-detail_mask = ExtResource("13_x10jq")
 detail_blend_mode = 1
-detail_albedo = ExtResource("12_553p4")
 uv1_scale = Vector3(0.05, 0.05, 0.05)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -217,13 +166,9 @@ uv2_triplanar = true
 uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wvnn6"]
-albedo_texture = ExtResource("9_p5mou")
 heightmap_enabled = true
-heightmap_texture = ExtResource("10_og3fp")
 detail_enabled = true
-detail_mask = ExtResource("10_og3fp")
 detail_uv_layer = 1
-detail_albedo = ExtResource("10_og3fp")
 uv1_scale = Vector3(0.1, 0.1, 0.1)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -231,14 +176,10 @@ uv2_triplanar = true
 uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mog2k"]
-albedo_texture = ExtResource("9_p5mou")
 heightmap_enabled = true
-heightmap_texture = ExtResource("10_og3fp")
 detail_enabled = true
-detail_mask = ExtResource("10_og3fp")
 detail_blend_mode = 2
 detail_uv_layer = 1
-detail_albedo = ExtResource("10_og3fp")
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -246,20 +187,15 @@ uv2_triplanar = true
 uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kg4er"]
-albedo_texture = ExtResource("19_egp1q")
 uv1_scale = Vector3(0.5, 0.5, 0.5)
 uv1_triplanar = true
 uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0qkgq"]
-albedo_texture = ExtResource("9_p5mou")
 heightmap_enabled = true
-heightmap_texture = ExtResource("10_og3fp")
 detail_enabled = true
-detail_mask = ExtResource("10_og3fp")
 detail_blend_mode = 2
 detail_uv_layer = 1
-detail_albedo = ExtResource("10_og3fp")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -269,25 +205,19 @@ uv2_world_triplanar = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3di3u"]
 albedo_color = Color(1, 0.4, 0.41, 1)
 metallic = 1.0
-metallic_texture = ExtResource("26_k1i0g")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jpox7"]
 albedo_color = Color(1, 0.4, 0.41, 1)
 metallic = 1.0
-metallic_texture = ExtResource("26_k1i0g")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xwc1v"]
-albedo_texture = ExtResource("9_p5mou")
 heightmap_enabled = true
-heightmap_texture = ExtResource("10_og3fp")
 detail_enabled = true
-detail_mask = ExtResource("10_og3fp")
 detail_uv_layer = 1
-detail_albedo = ExtResource("10_og3fp")
 uv1_scale = Vector3(0.05, 0.05, 0.05)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -295,14 +225,10 @@ uv2_triplanar = true
 uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drwyf"]
-albedo_texture = ExtResource("9_p5mou")
 heightmap_enabled = true
-heightmap_texture = ExtResource("10_og3fp")
 detail_enabled = true
-detail_mask = ExtResource("10_og3fp")
 detail_blend_mode = 2
 detail_uv_layer = 1
-detail_albedo = ExtResource("10_og3fp")
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -313,7 +239,6 @@ uv2_world_triplanar = true
 transparency = 1
 cull_mode = 2
 albedo_color = Color(0.540988, 0.000376382, 0.585057, 0.427451)
-albedo_texture = ExtResource("29_ve8vs")
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -321,7 +246,6 @@ uv1_world_triplanar = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gajpo"]
 albedo_color = Color(1, 0.4, 0.41, 1)
 metallic = 1.0
-metallic_texture = ExtResource("26_k1i0g")
 uv1_triplanar = true
 uv1_world_triplanar = true
 

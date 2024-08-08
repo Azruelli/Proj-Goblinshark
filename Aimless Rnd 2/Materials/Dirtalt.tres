@@ -1,14 +1,9 @@
-[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c1p646w25la8c"]
-
-[ext_resource type="Texture2D" uid="uid://b7r0lnrniuc3j" path="res://Textures/Dirt/Dirt_04.png" id="1_2jfwb"]
-[ext_resource type="Texture2D" uid="uid://cefqmevre0qmd" path="res://Textures/Noise/Craters/Craters 3 - 512x512.png" id="2_jb7ns"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c1p646w25la8c"]
 
 [resource]
-albedo_texture = ExtResource("1_2jfwb")
 detail_enabled = true
 detail_blend_mode = 3
 detail_uv_layer = 1
-detail_albedo = ExtResource("2_jb7ns")
 uv1_scale = Vector3(0.1, 0.1, 0.1)
 uv1_triplanar = true
 uv1_world_triplanar = true

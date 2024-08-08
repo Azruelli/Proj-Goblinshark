@@ -1,9 +1,15 @@
 res://Debug.tscn
-res://Player/Player States/player_air.gd
-res://Zealot/StateTimer.gd
-res://Global Scripts/ObjDestructible.gd
-res://Powerups/Meshes/Grapple_extend.tscn
-res://Powerups/Meshes/dash_extend.tscn
-res://Player.gd
-res://Powerups/Meshes/Grapple_extend.gd
-res://Powerups/Meshes/dash_extend.gd
+res://Materials/Dirtalt.tres
+res://Materials/tempgreen.tres
+res://Materials/light_stone.tres
+res://Materials/light_stone_interior.tres
+res://Materials/Smooth_Stone_1.tres
+res://Materials/Bricks.tres
+res://Materials/Underwater.tres
+res://Materials/Bloodstonealt.tres
+res://Materials/tempglass.tres
+res://Materials/Dirt.tres
+res://Materials/tempdestructible.tres
+res://Materials/Growth.tres
+res://Materials/Flesh_Root_Thick.tres
+res://Stages/Chapel_Outskirts.tscn

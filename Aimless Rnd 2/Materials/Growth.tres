@@ -1,15 +1,8 @@
-[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://1kn71whthmc2"]
-
-[ext_resource type="Texture2D" uid="uid://b0678rsfxyhri" path="res://Textures/Vegetation/Vegetation (44).png" id="1_lm1a2"]
-[ext_resource type="Texture2D" uid="uid://codb7wvf2m1yo" path="res://Textures/Unsorted/461223189.jpg" id="2_jnfbs"]
-[ext_resource type="Texture2D" uid="uid://0ymj67bcm8g6" path="res://Textures/Noise/Marble/Marble 4 - 512x512.png" id="3_k5rxl"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://1kn71whthmc2"]
 
 [resource]
 albedo_color = Color(0.74978, 0.74978, 0.74978, 1)
-albedo_texture = ExtResource("1_lm1a2")
 detail_enabled = true
-detail_mask = ExtResource("3_k5rxl")
-detail_albedo = ExtResource("2_jnfbs")
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
 uv1_world_triplanar = true

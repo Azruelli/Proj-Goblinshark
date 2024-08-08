@@ -1,17 +1,10 @@
-[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://xwcjcfkct5oy"]
-
-[ext_resource type="Texture2D" uid="uid://dc0wkgp5ji5eh" path="res://Textures/Dev/Light/texture_07.png" id="1_77tby"]
-[ext_resource type="Texture2D" uid="uid://cirnp6cwvmhrb" path="res://Textures/Dev/Dark/texture_08.png" id="2_nq1mv"]
-[ext_resource type="Texture2D" uid="uid://y2udoqoedh0m" path="res://Textures/Noise/Cracks/Cracks 13 - 512x512.png" id="3_ilx7t"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://xwcjcfkct5oy"]
 
 [resource]
 transparency = 1
 albedo_color = Color(1, 1, 1, 0.921569)
-albedo_texture = ExtResource("1_77tby")
 detail_enabled = true
-detail_mask = ExtResource("3_ilx7t")
 detail_blend_mode = 3
-detail_albedo = ExtResource("2_nq1mv")
 uv1_scale = Vector3(2, 2, 2)
 uv2_triplanar = true
 uv2_world_triplanar = true

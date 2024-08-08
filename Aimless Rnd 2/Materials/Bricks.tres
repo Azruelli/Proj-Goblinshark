@@ -1,20 +1,11 @@
-[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://ds0kn0hbb7kxb"]
-
-[ext_resource type="Texture2D" uid="uid://nim2nfjpwnpq" path="res://Textures/Bricks/BrickWall (9)/BrickWall (9)_BaseColor.png" id="1_u5b2g"]
-[ext_resource type="Texture2D" uid="uid://jjep07iadan8" path="res://Textures/Bricks/BrickWall (9)/BrickWall (9)_AmbientOcclusion.png" id="2_n0h1d"]
-[ext_resource type="Texture2D" uid="uid://y2udoqoedh0m" path="res://Textures/Noise/Cracks/Cracks 13 - 512x512.png" id="3_8rtnf"]
-[ext_resource type="Texture2D" uid="uid://bg36xayts2n82" path="res://Textures/Bricks/BrickWall (9)/BrickWall (9)_Normal.png" id="4_6ql3r"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ds0kn0hbb7kxb"]
 
 [resource]
-albedo_texture = ExtResource("1_u5b2g")
 normal_enabled = true
-normal_texture = ExtResource("4_6ql3r")
 ao_enabled = true
-ao_texture = ExtResource("2_n0h1d")
 detail_enabled = true
 detail_blend_mode = 3
 detail_uv_layer = 1
-detail_albedo = ExtResource("3_8rtnf")
 uv1_triplanar = true
 uv1_world_triplanar = true
 uv2_scale = Vector3(0.4, 0.4, 0.4)
